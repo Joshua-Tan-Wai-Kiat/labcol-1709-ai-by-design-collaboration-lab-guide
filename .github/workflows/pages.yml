@@ -24,7 +24,7 @@ jobs:
       - run: |
           python build.py
           mkdir site
-          cp index.html GUIDE.md site/
+          cp index.html GUIDE.md lab-topology.svg LABCOL-1709-AI-by-Design-Lab-Guide.docx site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
