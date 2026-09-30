@@ -10,7 +10,11 @@ def anchor(text):
 
 def inline(text):
     safe = html.escape(text)
-    return re.sub(r'https://[^\s<>]+', lambda m: f'<a href="{m[0]}">{m[0]}</a>', safe)
+    def link(match):
+        url = match[0].rstrip('.,:!?)')
+        suffix = match[0][len(url):]
+        return f'<a href="{url}">{url}</a>{suffix}'
+    return re.sub(r'https://[^\s<>]+', link, safe)
 
 def build():
     blocks = ROOT.joinpath('GUIDE.md').read_text(encoding='utf-8').strip().split('\n\n')
