@@ -10,7 +10,7 @@ The guide follows the supplied Cisco Live Melbourne template: learning objective
 
 ## Edit the guide
 
-Edit `GUIDE.md` using GitHubâ€™s pencil button and commit to `main`. GitHub Actions rebuilds and publishes the website automatically. To preview locally, run `python build.py` and open `index.html` in a browser.
+Edit `GUIDE.md` using GitHub’s pencil button and commit to `main`. GitHub Actions rebuilds and publishes the website automatically. To preview locally, run `python build.py` and open `index.html` in a browser.
 
 ## Publishing
 
@@ -20,4 +20,4 @@ In Settings > Pages, choose GitHub Actions. The workflow builds from GUIDE.md wi
 
 The original source Word document, embedded screenshots, example VPN credentials, session endpoints, and password construction rules are excluded. Obtain access details privately from your instructor or assigned session. Text refers to controls by name so the exercises can be followed without source screenshots.
 
-Source wording was corrected for Anitaâ€™s workstation number, the microphone requirement, and minor typographical errors. Feature descriptions and lab procedures reflect the supplied guide; the operational lab was not tested.
+Source wording was corrected for Anita’s workstation number, the microphone requirement, and minor typographical errors. Feature descriptions and lab procedures reflect the supplied guide; the operational lab was not tested.
