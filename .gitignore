@@ -1,3 +1,4 @@
 *.docx
+!LABCOL-1709-AI-by-Design-Lab-Guide.docx
 __pycache__/
 site/

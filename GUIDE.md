@@ -1,22 +1,47 @@
 # AI by Design for Collaboration
 
-Cisco Live Melbourne 2026 | LABCOL-1709
+Session ID: LABCOL-1709
 
-Authors: Hussain Ali and Omer Ilyas, Technical Marketing Engineers
+Speakers: Hussain Ali and Omer Ilyas
 
-Explore Cisco AI Assistant across Webex administration, messaging, and meetings. Follow the modules in order.
+Technical Marketing Engineers
 
-> Use the credentials and session details assigned privately by your instructor. Source screenshots and example access details are omitted from this public edition. For meeting audio exercises, use a physical workstation with a microphone signed in as Charles Holland; use virtual Workstation 2 for Anita Perez.
+Cisco Live Melbourne | November 9–12, 2026
 
-## Webex Suite AI Overview
+## Learning Objectives
+
+Upon completion of this lab, you will be able to:
+
+- Enable Cisco AI Assistant and AI features in Webex Control Hub.
+- Use AI Assistant to answer questions and summarize Webex messaging spaces.
+- Rewrite messages and translate individual messages or live conversations.
+- Schedule a Webex meeting with a natural-language request.
+- Test spoken-language detection, closed captions, and translated captions.
+- Use meeting AI Assistant for questions, action items, recording summaries, and transcripts.
+
+## Scenario
 
 In this hands-on lab, you will unlock the revolutionary potential of Artificial Intelligence (AI) across the Webex Suite (Messaging and Meeting). As AI continues to redefine the modern workplace, this lab is designed to show you how these technologies fundamentally transform collaboration, communication, and customer interactions. You will explore how Webex AI empowers administrators with better oversight, enriches employee productivity through smarter workflows, and delights customers with more personalized experiences.
 
-## Accessing your Lab
+You will administer an assigned Webex organization as Charles Holland, then collaborate with Anita Perez using two lab workstations. The messaging exercises lead into a meeting where you test language features and AI-generated meeting information.
+
+Use only the credentials and session access details assigned privately to your lab pod. The public guide excludes example credentials and source screenshots.
+
+## Network Diagram
+
+![Webex lab environment showing dCloud workstations, a physical microphone-enabled workstation, and the Webex cloud](lab-topology.svg)
+
+This diagram shows the logical lab environment. Workstation 1 is assigned to Charles Holland for administration and messaging. Workstation 2 is assigned to Anita Perez. For spoken-audio exercises, sign in as Charles on a physical workstation with a microphone. Use the endpoints supplied privately by your assigned session.
+
+## Task 1: Access and Prepare Your Lab
+
+Connect to your assigned dCloud session, open the two workstations, and sign in to Webex and Control Hub.
+
+### Step 1: Connect to Your Assigned dCloud Session
 
 Open the Details tab on your assigned dCloud eXPO session. Use the host, username, and password provided privately for your session to connect with Cisco Secure Client (formerly AnyConnect). Every session has unique access details. Continue after connecting to your assigned pod.
 
-## Connect to the Workstations via Remote Desktop
+### Step 2: Open the Lab Workstations
 
 Connect to the Remote desktop of Workstation 1. On your session topology click workstation 1 and click Remote Desktop to connect
 
@@ -26,19 +51,25 @@ To connect to Workstation 2, follow similar instructions. The user for Workstati
 
 On Workstation 1’s desktop, open WEBEX_PASSWORD.txt or Session_Info.txt to obtain the credentials for the Webex App and Webex Control Hub.
 
-## Login to the Webex Clients
+### Step 3: Sign In to the Webex Apps
 
 Sign in to the Webex App as Charles Holland on Workstation 1 and Anita Perez on Workstation 2. Use the credentials in the files on the respective workstation desktops.
 
-## Login to Collaboration Control Hub from within Workstation 1
+### Step 4: Sign In to Webex Control Hub
 
 Launch Chrome within Workstation 1 and go to https://admin.webex.com. Sign in with your assigned administrator credentials from the desktop file. If the file is missing, obtain the login details privately from your instructor or session details. Complete the administrative lab tasks within Workstation 1.
 
 Now you can proceed with the lab modules.
 
-## Module 1: Setup your Lab environment
+### Step 5: Verify the Lab Accounts
 
-### Module 1a: Activating and configuring the Cisco AI Assistant in the Control Hub
+Confirm that Charles Holland is signed in on Workstation 1, Anita Perez is signed in on Workstation 2, and Control Hub opens for your assigned Webex organization. Keep both workstations available for the following tasks.
+
+## Task 2: Activate Cisco AI Assistant
+
+Enable the organization-level AI features used by the messaging and meetings exercises. Complete these administrative steps in your assigned lab organization.
+
+### Step 1: Open Control Hub
 
 The Webex Control Hub serves as the central command center for Webex AI. As an administrator, you can decide which AI capabilities are enabled, ensuring they align with your organization’s policies while maximizing productivity. In this module, you will learn how to navigate the AI settings to enable the suite-wide features that power the subsequent modules in this lab.
 
@@ -46,17 +77,25 @@ Open new browser tab with workstation 1’s browser and go to URL  https://admin
 
 Sign in to Webex Control Hub with the Charles Holland credentials from the file on Workstation 1’s desktop.
 
+### Step 2: Set the Lab Idle Timeout
+
 Once logged into Control Hub, for security reasons, Collaboration Control Hub signs out every 20 minutes (Idle timeout) by default. For this lab, let’s make the idle time out longer so the Control Hub does not sign you out often during this lab. Go to MANAGEMENT > Organization Settings > Control Hub’s idle timeout. Drop down the option for Control Hub idle timeout and select 12 hours or no timeout. Click Save.
+
+### Step 3: Enable the AI Features
 
 Next, we will turn on AI features including the Cisco AI Assistant for your pod’s Webex tenant. Continuing on  Organization Settings page scroll down to section  Cisco AI Assistant & AI features > click on Customize AI Assistant & AI features.
 
 Ensure all the toggles are turned ON except for AI Assistant Integrations, External sources (General AI Settings),  AI Assistant workflow automations. Click Save at the bottom right.
 
-This completes Activating and configuring the Cisco AI Assistant and its associated features within Webex Control Hub
+### Step 4: Verify Your Changes
 
-## Module 2: Enhancing Messaging with Webex AI
+Confirm that the requested AI settings were saved. AI Assistant Integrations, External sources, and AI Assistant workflow automations should remain off, as specified for this lab.
 
-### Module 2a: Ask Me Anything: AI Assistant for Messaging
+## Task 3: Enhance Webex Messaging with AI
+
+Use Charles Holland’s Webex App on Workstation 1. Keep Anita Perez’s Webex App on Workstation 2 available for exchanging messages.
+
+### Step 1: Ask Questions About a Messaging Space
 
 The Ask Me Anything (AMA) feature in Webex messaging is part of the Cisco AI Assistant designed to help users quickly find information within their conversation spaces. It allows users to ask questions about recent discussions, content, or context directly within a space. Any questions that are asked and the answers received are only visible to you and are not saved in the space.
 
@@ -76,7 +115,7 @@ Click More, and select Copy, to copy answer content and share elsewhere.
 
 Click Stop generating to cancel an AI Assistant reply.
 
-### Module 2b: Space Summaries: Automated Conversation Overviews
+### Step 2: Generate a Space Summary
 
 When you're busy, or you've been away from the office, catching up with all your spaces can be challenging. AI Assistant can generate space summaries to help you quickly catch up on missed messages and conversations in the space. Stay informed on decisions, key points, and get up to date with the discussion at a glance.
 
@@ -84,7 +123,7 @@ Continuing on workstation 1, Cisco AI Assistant on Webex, click on Summarize and
 
 Your summary will be displayed in the Cisco AI Assistant panel.
 
-### Module 2c: Smart Rewrite: AI-Powered Message Refinement
+### Step 3: Rewrite a Message
 
 Enhance and improve your communication and collaboration with your team, with AI powered message rewrites. AI Assistant analyses your message and provides options to adapt the style, tone, and content quality, to help you communicate more effectively.
 
@@ -92,9 +131,9 @@ Continuing on workstation 1’s  Webex App.  Type any question in chat window an
 
 AI Assistant analyzes your message and provides options to fix mistakes, improve spelling and grammar, update format and style, and change the message tone.
 
-It will open the rewrite pop-up window.  Choose any of the available drop-down options to rewrite your message and click Apply to generate a preview.  You can click to generate more preview versions. To go back and forth between versions, click the left and right arrows.  Finally when you are satisfied with a new version the message, click Update message, or if you wish to use your original message you can discard all changes by clicking Cancel.  For now keep the message generated with AI (with all your desired options) and press Enter to send your updated message.
+It will open the rewrite pop-up window.  Choose any of the available drop-down options to rewrite your message and click Apply to generate a preview.  Use the regenerate control to produce another preview version. To go back and forth between versions, click the left and right arrows.  Finally when you are satisfied with a new version the message, click Update message, or if you wish to use your original message you can discard all changes by clicking Cancel.  For now keep the message generated with AI (with all your desired options) and press Enter to send your updated message.
 
-### Module 2d: Real-Time Message Translation
+### Step 4: Translate Messages
 
 Promote more effective communication and break down barriers in your direct or group spaces with our translation feature. Enable your target language in your settings, and translate individual messages, or all messages in your direct or group spaces in real time.
 
@@ -110,7 +149,11 @@ NOTE: Sometimes the live translation takes couple of seconds or few messages to 
 
 This completes this module.
 
-## Module 3: AI-Powered Webex Meetings
+### Step 5: Verify the Messaging Features
+
+Check that an AI answer includes source-message citations, a space summary appears in the assistant panel, a rewritten message can be sent, and translated messages use your chosen language.
+
+## Task 4: Use AI in Webex Meetings
 
 Note: So far in this lab, we have logged into virtual workstations with no microphone capabilities. You may login to the local machine as Charles Holland (previously logged into virtual workstation 1 as cholland) to take advantage of the microphone of your local machine for testing features that need audio.
 
@@ -124,7 +167,7 @@ On top of this foundation, the AI Assistant adds a higher intelligence layer tha
 
 AI is also used for Webex meeting recordings, to analyze captured audio and content and convert spoken conversations into time-aligned text using neural speech-to-text engines. The system automatically detects the spoken language, identifies speakers, and enriches the recording with searchable transcripts and captions. After the meeting, large language models interpret the transcript and meeting context to understand topic flow, intent, and key moments. When the Cisco AI Assistant is enabled, these models generate intelligent outputs such as summaries, highlights, action items, and chapters. This AI-driven processing transforms recordings from passive videos into searchable, contextual, and actionable meeting assets.
 
-### Module 3a: Schedule your meetings with Cisco AI Assistant
+### Step 1: Schedule a Meeting with AI Assistant
 
 Webex Meetings can be scheduled in several ways. Meetings can be scheduled directly from the app using the Schedule a Meeting button. Meetings can be scheduled from Microsoft Outlook, either via Hybrid Calendar Service by specifying “@webex” in the meeting location or via the Webex Integration to Microsoft Outlook. Meetings can also be scheduled via the Webex Site itself, or via APIs.
 
@@ -144,7 +187,7 @@ The assistant will capture the information and summarize the request. It may sug
 
 The assistant will go ahead and schedule the Webex meeting
 
-### Module 3b: Language detection, Closed Captions and Real time translation
+### Step 2: Test Language Detection and Translated Captions
 
 In Webex Meetings, powered by AI, Webex can automatically detect the language being spoken, so you don’t have to set or guess it yourself. Once the speech is recognized, real-time closed captions appear on screen, helping everyone follow along – even if the audio is unclear or there is background noise. For meetings with participants speaking different languages, Webex AI can instantly translate what’s being said, allowing everyone to see the conversation in a language they understand. This makes communication smooth, inclusive, and effortless, no matter where participants are in the world.
 
@@ -180,7 +223,7 @@ If you are interested to explore further, you can choose to select any set of di
 
 Keep the meeting running and proceed to next module.
 
-### Module 3c: AI Assistant in Webex Meetings
+### Step 3: Use Meeting AI Assistant and Review the Summary
 
 Now, let's add/enable Cisco AI Assistant to this meeting and see how it helps to automatically capture meeting highlights, action items, and summaries to help participants stay aligned without manual notetaking. During the meeting, the AI Assistant identifies key discussion points and important moments, even if users join late. After the meeting, it generates a concise summary that outlines what was discussed and the overall context. Action items are clearly extracted so teams know what needs to be done next. In the backend, the AI Assistant uses cloud-based speech-to-text and large language models to listen to meeting audio, understand conversational context, and intelligently extract decisions, tasks, and key moments—turning live conversations into structured meeting notes.
 
@@ -207,3 +250,18 @@ Once the meeting has ended, within a minute or two, on attendee workstation (phy
 Open the Webex meeting summary and transcript.
 
 This completes the lab activity.
+
+### Step 4: Verify the Meeting Results
+
+Confirm that both participants joined the scheduled meeting, captions appeared in the selected languages, the meeting assistant answered questions using meeting content, and the summary and transcript became available after the meeting.
+
+## Lab Environment Reference
+
+| Component | Purpose |
+| --- | --- |
+| Assigned dCloud session | Hosts the virtual lab workstations and private access details |
+| Workstation 1 — Charles Holland | Webex administration and messaging exercises |
+| Workstation 2 — Anita Perez | Second participant for messaging and meetings |
+| Physical workstation — Charles Holland | Supplies microphone audio for speech-based meeting exercises |
+| Webex Control Hub | Organization and meeting-site AI configuration |
+| Webex cloud | Messaging, meeting, caption, translation, and AI Assistant services |

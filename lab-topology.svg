@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-labelledby="title desc">
+<title id="title">Webex lab environment</title>
+<desc id="desc">Charles Holland on Workstation 1 and Anita Perez on Workstation 2 use their assigned dCloud session. Charles uses a physical workstation with a microphone for audio exercises. All clients connect to Webex cloud services. Control Hub configures the organization.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8Z" fill="#0d274d"/></marker></defs>
+<rect width="1000" height="540" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#0d274d">
+<rect x="20" y="65" width="420" height="340" rx="12" fill="#f5f7fb" stroke="#0d274d" stroke-width="2"/>
+<text x="40" y="102" font-size="24" font-weight="bold">Assigned dCloud session</text>
+<rect x="45" y="130" width="370" height="105" rx="6" fill="white" stroke="#96a4b9"/>
+<text x="65" y="165" font-size="22" font-weight="bold">Workstation 1 · Charles Holland</text>
+<text x="65" y="199" font-size="19">Control Hub administration · Webex App</text>
+<rect x="45" y="265" width="370" height="105" rx="6" fill="white" stroke="#96a4b9"/>
+<text x="65" y="302" font-size="22" font-weight="bold">Workstation 2 · Anita Perez</text>
+<text x="65" y="336" font-size="19">Webex App · Second participant</text>
+<rect x="575" y="65" width="395" height="160" rx="12" fill="#0d274d"/>
+<text x="600" y="105" fill="white" font-size="26" font-weight="bold">Webex cloud</text>
+<text x="600" y="143" fill="white" font-size="20">Messaging · Meetings · AI Assistant</text>
+<text x="600" y="178" fill="white" font-size="20">Captions · Translation · Summaries</text>
+<rect x="575" y="265" width="395" height="100" rx="8" fill="#edf1f8" stroke="#96a4b9"/>
+<text x="600" y="305" font-size="22" font-weight="bold">Webex Control Hub</text>
+<text x="600" y="337" font-size="19">Organization and meeting-site settings</text>
+<rect x="175" y="445" width="650" height="75" rx="8" fill="#edf1f8" stroke="#96a4b9"/>
+<text x="198" y="477" font-size="22" font-weight="bold">Physical workstation · Charles Holland</text>
+<text x="198" y="504" font-size="19">Microphone audio for meeting exercises</text>
+</g>
+<g stroke="#0d274d" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+<path d="M440 165H570"/><path d="M440 318H490V200H570"/>
+<path d="M773 265V231"/><path d="M827 478H990V205H977"/>
+</g></svg>
