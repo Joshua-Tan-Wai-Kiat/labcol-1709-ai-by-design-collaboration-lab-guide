@@ -1,0 +1,147 @@
+{
+  "pages": [
+    {
+      "path": "index.html",
+      "title": "Lab overview",
+      "group": "Getting started",
+      "sections": [
+        "webex-suite-ai-overview"
+      ]
+    },
+    {
+      "path": "getting-started/index.html",
+      "title": "Access your lab",
+      "group": "Getting started",
+      "sections": [
+        "accessing-your-lab",
+        "connect-to-the-workstations-via-remote-desktop",
+        "login-to-the-webex-clients",
+        "login-to-collaboration-control-hub-from-within-workstation-1",
+        "alternate-instructions-for-accessing-collaboration-control-hub"
+      ]
+    },
+    {
+      "path": "setup/index.html",
+      "title": "Activate AI Assistant",
+      "group": "Setup",
+      "sections": [
+        "module-1-setup-your-lab-environment",
+        "module-1a-activating-and-configuring-the-cisco-ai-assistant-in-the-control-hub"
+      ]
+    },
+    {
+      "path": "messaging/ask-assistant/index.html",
+      "title": "Ask AI Assistant",
+      "group": "Messaging",
+      "sections": [
+        "module-2-enhancing-messaging-with-webex-ai",
+        "module-2a-ask-me-anything-ai-assistant-for-messaging"
+      ]
+    },
+    {
+      "path": "messaging/space-summaries/index.html",
+      "title": "Space summaries",
+      "group": "Messaging",
+      "sections": [
+        "module-2b-space-summaries-automated-conversation-overviews"
+      ]
+    },
+    {
+      "path": "messaging/rewrite/index.html",
+      "title": "Rewrite messages",
+      "group": "Messaging",
+      "sections": [
+        "module-2c-smart-rewrite-ai-powered-message-refinement"
+      ]
+    },
+    {
+      "path": "messaging/translation/index.html",
+      "title": "Translate messages",
+      "group": "Messaging",
+      "sections": [
+        "module-2d-real-time-message-translation"
+      ]
+    },
+    {
+      "path": "meetings/index.html",
+      "title": "Meeting overview",
+      "group": "Meetings",
+      "sections": [
+        "module-3-ai-powered-webex-meetings"
+      ]
+    },
+    {
+      "path": "meetings/schedule/index.html",
+      "title": "Schedule with AI",
+      "group": "Meetings",
+      "sections": [
+        "module-3a-schedule-your-meetings-with-cisco-ai-assistant"
+      ]
+    },
+    {
+      "path": "meetings/captions/index.html",
+      "title": "Captions and translation",
+      "group": "Meetings",
+      "sections": [
+        "module-3b-language-detection-closed-captions-and-real-time-translation"
+      ]
+    },
+    {
+      "path": "meetings/assistant/index.html",
+      "title": "Meeting AI Assistant",
+      "group": "Meetings",
+      "sections": [
+        "module-3c-ai-assistant-in-webex-meetings"
+      ]
+    },
+    {
+      "path": "screenshots/index.html",
+      "title": "Screenshot availability",
+      "group": "Reference",
+      "sections": []
+    },
+    {
+      "path": "print/index.html",
+      "title": "Complete printable guide",
+      "group": "Reference",
+      "sections": [
+        "webex-suite-ai-overview",
+        "accessing-your-lab",
+        "connect-to-the-workstations-via-remote-desktop",
+        "login-to-the-webex-clients",
+        "login-to-collaboration-control-hub-from-within-workstation-1",
+        "alternate-instructions-for-accessing-collaboration-control-hub",
+        "module-1-setup-your-lab-environment",
+        "module-1a-activating-and-configuring-the-cisco-ai-assistant-in-the-control-hub",
+        "module-2-enhancing-messaging-with-webex-ai",
+        "module-2a-ask-me-anything-ai-assistant-for-messaging",
+        "module-2b-space-summaries-automated-conversation-overviews",
+        "module-2c-smart-rewrite-ai-powered-message-refinement",
+        "module-2d-real-time-message-translation",
+        "module-3-ai-powered-webex-meetings",
+        "module-3a-schedule-your-meetings-with-cisco-ai-assistant",
+        "module-3b-language-detection-closed-captions-and-real-time-translation",
+        "module-3c-ai-assistant-in-webex-meetings"
+      ]
+    }
+  ],
+  "legacy_routes": {
+    "webex-suite-ai-overview": "index.html",
+    "accessing-your-lab": "getting-started/index.html",
+    "connect-to-the-workstations-via-remote-desktop": "getting-started/index.html",
+    "login-to-the-webex-clients": "getting-started/index.html",
+    "login-to-collaboration-control-hub-from-within-workstation-1": "getting-started/index.html",
+    "alternate-instructions-for-accessing-collaboration-control-hub": "getting-started/index.html",
+    "module-1-setup-your-lab-environment": "setup/index.html",
+    "module-1a-activating-and-configuring-the-cisco-ai-assistant-in-the-control-hub": "setup/index.html",
+    "module-2-enhancing-messaging-with-webex-ai": "messaging/ask-assistant/index.html",
+    "module-2a-ask-me-anything-ai-assistant-for-messaging": "messaging/ask-assistant/index.html",
+    "module-2b-space-summaries-automated-conversation-overviews": "messaging/space-summaries/index.html",
+    "module-2c-smart-rewrite-ai-powered-message-refinement": "messaging/rewrite/index.html",
+    "module-2d-real-time-message-translation": "messaging/translation/index.html",
+    "module-3-ai-powered-webex-meetings": "meetings/index.html",
+    "module-3a-schedule-your-meetings-with-cisco-ai-assistant": "meetings/schedule/index.html",
+    "module-3b-language-detection-closed-captions-and-real-time-translation": "meetings/captions/index.html",
+    "module-3c-ai-assistant-in-webex-meetings": "meetings/assistant/index.html"
+  }
+}

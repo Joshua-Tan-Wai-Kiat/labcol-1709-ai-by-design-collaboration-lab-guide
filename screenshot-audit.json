@@ -1,0 +1,580 @@
+{
+  "checked_at": "2026-10-27T05:26:24.118883+00:00",
+  "base_url": "https://joshua-tan-wai-kiat.github.io/labcol-1709-ai-by-design-collaboration-lab-guide/",
+  "word_media_total": 61,
+  "published_assets": 50,
+  "published_screenshots": 41,
+  "published_control_icons": 7,
+  "published_branding": 2,
+  "withheld_for_privacy": 10,
+  "non_instructional_not_used": 1,
+  "failed_assets": [],
+  "images": [
+    {
+      "file": "image1.jpeg",
+      "role": "Non-instructional menu icon",
+      "status": "Not used",
+      "reason": "Non-instructional menu icon; no lab screenshot is replaced by this asset."
+    },
+    {
+      "file": "image2.jpg",
+      "path": "assets/source-guide/image2.jpg",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 27179,
+      "role": "Branding",
+      "status": "Published"
+    },
+    {
+      "file": "image3.png",
+      "path": "assets/source-guide/image3.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 5448,
+      "role": "Branding",
+      "status": "Published"
+    },
+    {
+      "file": "image4.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Example VPN credentials and session identifier"
+    },
+    {
+      "file": "image5.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Example VPN account"
+    },
+    {
+      "file": "image6.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Workstation credentials and session identifier"
+    },
+    {
+      "file": "image7.png",
+      "path": "assets/source-guide/image7.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 700053,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image8.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Password and administrator account"
+    },
+    {
+      "file": "image9.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Passwords and session details"
+    },
+    {
+      "file": "image10.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Example session DNS and identifier"
+    },
+    {
+      "file": "image11.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Passwords and administrator account"
+    },
+    {
+      "file": "image12.png",
+      "path": "assets/source-guide/image12.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 70604,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image13.png",
+      "path": "assets/source-guide/image13.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 89141,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image14.png",
+      "path": "assets/source-guide/image14.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 160259,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image15.png",
+      "path": "assets/source-guide/image15.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 48897,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image16.png",
+      "path": "assets/source-guide/image16.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 170800,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image17.png",
+      "path": "assets/source-guide/image17.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 106191,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image18.jpeg",
+      "path": "assets/source-guide/image18.jpeg",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1601,
+      "role": "Control icon",
+      "status": "Published"
+    },
+    {
+      "file": "image19.jpeg",
+      "path": "assets/source-guide/image19.jpeg",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 887,
+      "role": "Control icon",
+      "status": "Published"
+    },
+    {
+      "file": "image20.jpeg",
+      "path": "assets/source-guide/image20.jpeg",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1138,
+      "role": "Control icon",
+      "status": "Published"
+    },
+    {
+      "file": "image21.png",
+      "path": "assets/source-guide/image21.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1459530,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image22.png",
+      "path": "assets/source-guide/image22.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1458723,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image23.png",
+      "path": "assets/source-guide/image23.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1754957,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image24.png",
+      "path": "assets/source-guide/image24.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 576586,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image25.png",
+      "path": "assets/source-guide/image25.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 557715,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image26.png",
+      "path": "assets/source-guide/image26.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 548373,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image27.jpeg",
+      "path": "assets/source-guide/image27.jpeg",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1336,
+      "role": "Control icon",
+      "status": "Published"
+    },
+    {
+      "file": "image28.png",
+      "path": "assets/source-guide/image28.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1110536,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image29.jpeg",
+      "path": "assets/source-guide/image29.jpeg",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1318,
+      "role": "Control icon",
+      "status": "Published"
+    },
+    {
+      "file": "image30.png",
+      "path": "assets/source-guide/image30.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 356484,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image31.png",
+      "path": "assets/source-guide/image31.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1140865,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image32.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Private account email and phone number"
+    },
+    {
+      "file": "image33.png",
+      "path": "assets/source-guide/image33.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 148332,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image34.png",
+      "path": "assets/source-guide/image34.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 745414,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image35.png",
+      "path": "assets/source-guide/image35.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 266840,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image36.png",
+      "path": "assets/source-guide/image36.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 299313,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image37.png",
+      "path": "assets/source-guide/image37.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 293802,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image38.png",
+      "path": "assets/source-guide/image38.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 175084,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image39.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Password and administrator account"
+    },
+    {
+      "file": "image40.png",
+      "path": "assets/source-guide/image40.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 149551,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image41.png",
+      "role": "Instructional screenshot",
+      "status": "Withheld for privacy",
+      "reason": "Tenant subscription identifier and session site"
+    },
+    {
+      "file": "image42.png",
+      "path": "assets/source-guide/image42.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 138449,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image43.png",
+      "path": "assets/source-guide/image43.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 2264,
+      "role": "Control icon",
+      "status": "Published"
+    },
+    {
+      "file": "image44.png",
+      "path": "assets/source-guide/image44.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 27009,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image45.png",
+      "path": "assets/source-guide/image45.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 18481,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image46.png",
+      "path": "assets/source-guide/image46.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 22721,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image47.png",
+      "path": "assets/source-guide/image47.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 260016,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image48.png",
+      "path": "assets/source-guide/image48.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 490123,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image49.png",
+      "path": "assets/source-guide/image49.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 308830,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image50.png",
+      "path": "assets/source-guide/image50.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 229246,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image51.png",
+      "path": "assets/source-guide/image51.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 82913,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image52.png",
+      "path": "assets/source-guide/image52.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 189506,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image53.png",
+      "path": "assets/source-guide/image53.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 220883,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image54.png",
+      "path": "assets/source-guide/image54.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 267100,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image55.png",
+      "path": "assets/source-guide/image55.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 270112,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image56.png",
+      "path": "assets/source-guide/image56.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 261848,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image57.png",
+      "path": "assets/source-guide/image57.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 264966,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image58.png",
+      "path": "assets/source-guide/image58.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 255913,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image59.png",
+      "path": "assets/source-guide/image59.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 1784,
+      "role": "Control icon",
+      "status": "Published"
+    },
+    {
+      "file": "image60.png",
+      "path": "assets/source-guide/image60.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 103243,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    },
+    {
+      "file": "image61.png",
+      "path": "assets/source-guide/image61.png",
+      "http_status": 200,
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 158383,
+      "role": "Instructional screenshot",
+      "status": "Published"
+    }
+  ]
+}
