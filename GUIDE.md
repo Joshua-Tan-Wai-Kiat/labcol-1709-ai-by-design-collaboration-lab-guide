@@ -40,7 +40,7 @@ To connect to Workstation 2, follow similar instructions. The user for Workstati
 
 <span class="omitted-figure">Screenshot 6: example private access or account details omitted from the public edition. Use your assigned session details.</span>
 
-<a class="figure-link" href="assets/source-guide/image7.png" target="_blank" rel="noopener" aria-label="Open screenshot 7 at full size"><img class="source-figure" src="assets/source-guide/image7.png" alt="Lab guide screenshot 7" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image7.png" target="_blank" rel="noopener" aria-label="Open screenshot 7 at full size"><img class="source-figure" src="assets/source-guide/image7.png" width="3661" height="1659" alt="Lab guide screenshot 7" loading="lazy" decoding="async"></a>
 
 Within Workstation 1’s Desktop, there will be a file named WEBEX_PASSWORD.txt or Session_Info.txt as shown above. Launch the file to get the username and password for the Webex App and the Collaboration Control Hub for this lab. 
 
@@ -100,23 +100,23 @@ The Webex Control Hub serves as the central command center for <strong>Webex AI<
 
 3. Once logged into Control Hub, for security reasons, <strong>Collaboration</strong><strong> Control Hub</strong> signs out every 20 minutes (Idle timeout) by default. For this lab, let’s make the idle time out longer so the Control Hub does not sign you out often during this lab. Go to <strong>MANAGEMENT &gt; Organization Settings &gt; Control Hub’s idle timeout. </strong>Drop down the option for <strong>Control Hub idle timeout</strong> and select <strong>12 hours </strong>or <strong>no timeout</strong>. Click <strong>Save</strong>.
 
-<a class="figure-link" href="assets/source-guide/image12.png" target="_blank" rel="noopener" aria-label="Open screenshot 12 at full size"><img class="source-figure" src="assets/source-guide/image12.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image12.png" target="_blank" rel="noopener" aria-label="Open screenshot 12 at full size"><img class="source-figure" src="assets/source-guide/image12.png" width="1159" height="485" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>  
 
 4. Next, we will turn on AI features including the Cisco AI Assistant for your pod’s Webex tenant. Continuing on <strong>Organization</strong> <strong>Settings</strong> page scroll down to section  <strong>Cisco</strong><strong> AI Assistant &amp; AI features</strong> &gt; click on <strong>Customize AI Assistant &amp; AI features</strong> as shown below.
 
-<a class="figure-link" href="assets/source-guide/image13.png" target="_blank" rel="noopener" aria-label="Open screenshot 13 at full size"><img class="source-figure" src="assets/source-guide/image13.png" alt="Lab guide screenshot 13" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image13.png" target="_blank" rel="noopener" aria-label="Open screenshot 13 at full size"><img class="source-figure" src="assets/source-guide/image13.png" width="1264" height="528" alt="Lab guide screenshot 13" loading="lazy" decoding="async"></a>
 
 5. Ensure all the toggles are turned <strong>ON</strong> except for <strong>AI Assistant Integrations</strong><strong>,</strong> <strong>External sources</strong><strong> (General AI Settings</strong><strong>), </strong> <strong>AI</strong><strong> Assistant workflow automations</strong>. Click <strong>Save</strong> at the bottom right. 
 
-<a class="figure-link" href="assets/source-guide/image14.png" target="_blank" rel="noopener" aria-label="Open screenshot 14 at full size"><img class="source-figure" src="assets/source-guide/image14.png" alt="Lab guide screenshot 14" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image14.png" target="_blank" rel="noopener" aria-label="Open screenshot 14 at full size"><img class="source-figure" src="assets/source-guide/image14.png" width="1394" height="966" alt="Lab guide screenshot 14" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image15.png" target="_blank" rel="noopener" aria-label="Open screenshot 15 at full size"><img class="source-figure" src="assets/source-guide/image15.png" alt="Lab guide screenshot 15" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image15.png" target="_blank" rel="noopener" aria-label="Open screenshot 15 at full size"><img class="source-figure" src="assets/source-guide/image15.png" width="1156" height="326" alt="Lab guide screenshot 15" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image16.png" target="_blank" rel="noopener" aria-label="Open screenshot 16 at full size"><img class="source-figure" src="assets/source-guide/image16.png" alt="Lab guide screenshot 16" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image16.png" target="_blank" rel="noopener" aria-label="Open screenshot 16 at full size"><img class="source-figure" src="assets/source-guide/image16.png" width="1852" height="1042" alt="Lab guide screenshot 16" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image17.png" target="_blank" rel="noopener" aria-label="Open screenshot 17 at full size"><img class="source-figure" src="assets/source-guide/image17.png" alt="Lab guide screenshot 17" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image17.png" target="_blank" rel="noopener" aria-label="Open screenshot 17 at full size"><img class="source-figure" src="assets/source-guide/image17.png" width="1543" height="1056" alt="Lab guide screenshot 17" loading="lazy" decoding="async"></a>
 
 6. This completes <strong>Activating and configuring the Cisco AI Assistant and its associated features within Webex Control Hub</strong>
 
@@ -130,7 +130,7 @@ The <strong>Ask Me Anything</strong> (AMA) feature in Webex messaging is part of
 
 1. Continuing on workstation 1, bring up Webex app (logged in as <strong>Charles Holland</strong>)
 
-2. Go to the app header on top right corner and click the <strong>AI Assistant</strong> [ <img class="inline-icon" src="assets/source-guide/image18.jpeg" alt="Cisco AI Assistant icon" style="height:16px">]. Then, select a space from your spaces list.
+2. Go to the app header on top right corner and click the <strong>AI Assistant</strong> [ <img class="inline-icon" src="assets/source-guide/image18.jpeg" width="30" height="28" alt="Cisco AI Assistant icon" style="height:16px">]. Then, select a space from your spaces list.
 
 3. In the Cisco AI Assistant panel, select: 
 
@@ -138,19 +138,19 @@ The <strong>Ask Me Anything</strong> (AMA) feature in Webex messaging is part of
 
 - Answers come with highlighted citation links that you can click, to go directly to the source messages, so you can quickly get to specific content for more information.
 
-- Click <strong>More</strong> [<img class="inline-icon" src="assets/source-guide/image19.jpeg" alt="More Options button" style="height:22px">], and select <strong>Copy</strong> [<img class="inline-icon" src="assets/source-guide/image20.jpeg" alt="Copy icon" style="height:21px">], to copy answer content and share elsewhere.
+- Click <strong>More</strong> [<img class="inline-icon" src="assets/source-guide/image19.jpeg" width="22" height="22" alt="More Options button" style="height:22px">], and select <strong>Copy</strong> [<img class="inline-icon" src="assets/source-guide/image20.jpeg" width="22" height="21" alt="Copy icon" style="height:21px">], to copy answer content and share elsewhere.
 
 - Click Stop generating to cancel an AI Assistant reply.
 
-<a class="figure-link" href="assets/source-guide/image21.png" target="_blank" rel="noopener" aria-label="Open screenshot 21 at full size"><img class="source-figure" src="assets/source-guide/image21.png" alt="A screenshot of a chat
+<a class="figure-link" href="assets/source-guide/image21.png" target="_blank" rel="noopener" aria-label="Open screenshot 21 at full size"><img class="source-figure" src="assets/source-guide/image21.png" width="2700" height="1548" alt="A screenshot of a chat
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image22.png" target="_blank" rel="noopener" aria-label="Open screenshot 22 at full size"><img class="source-figure" src="assets/source-guide/image22.png" alt="A screenshot of a chat
+<a class="figure-link" href="assets/source-guide/image22.png" target="_blank" rel="noopener" aria-label="Open screenshot 22 at full size"><img class="source-figure" src="assets/source-guide/image22.png" width="2680" height="1476" alt="A screenshot of a chat
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image23.png" target="_blank" rel="noopener" aria-label="Open screenshot 23 at full size"><img class="source-figure" src="assets/source-guide/image23.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image23.png" target="_blank" rel="noopener" aria-label="Open screenshot 23 at full size"><img class="source-figure" src="assets/source-guide/image23.png" width="2690" height="1490" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
@@ -160,33 +160,33 @@ When you&#x27;re busy, or you&#x27;ve been away from the office, catching up wit
 
 1. Continuing on workstation 1, Cisco AI Assistant on Webex, click on <strong>Summarize</strong> as shown below and select 1 hour or 1 week. 
 
- <a class="figure-link" href="assets/source-guide/image24.png" target="_blank" rel="noopener" aria-label="Open screenshot 24 at full size"><img class="source-figure" src="assets/source-guide/image24.png" alt="Lab guide screenshot 24" loading="lazy" decoding="async"></a>
+ <a class="figure-link" href="assets/source-guide/image24.png" target="_blank" rel="noopener" aria-label="Open screenshot 24 at full size"><img class="source-figure" src="assets/source-guide/image24.png" width="1264" height="719" alt="Lab guide screenshot 24" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image25.png" target="_blank" rel="noopener" aria-label="Open screenshot 25 at full size"><img class="source-figure" src="assets/source-guide/image25.png" alt="Lab guide screenshot 25" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image25.png" target="_blank" rel="noopener" aria-label="Open screenshot 25 at full size"><img class="source-figure" src="assets/source-guide/image25.png" width="1252" height="710" alt="Lab guide screenshot 25" loading="lazy" decoding="async"></a>
 
 Your summary will be displayed in the Cisco AI Assistant panel. 
 
- <a class="figure-link" href="assets/source-guide/image26.png" target="_blank" rel="noopener" aria-label="Open screenshot 26 at full size"><img class="source-figure" src="assets/source-guide/image26.png" alt="Lab guide screenshot 26" loading="lazy" decoding="async"></a>
+ <a class="figure-link" href="assets/source-guide/image26.png" target="_blank" rel="noopener" aria-label="Open screenshot 26 at full size"><img class="source-figure" src="assets/source-guide/image26.png" width="1254" height="694" alt="Lab guide screenshot 26" loading="lazy" decoding="async"></a>
 
 ### Module 2c: Smart Rewrite: AI-Powered Message Refinement
 
 Enhance and improve your communication and collaboration with your team, with AI powered message rewrites. AI Assistant analyses your message and provides options to adapt the style, tone, and content quality, to help you communicate more effectively.
 
-1. Continuing on workstation 1’s  Webex App.  Type any question in chat window and click <strong>Rewrite message</strong> [<img class="inline-icon" src="assets/source-guide/image27.jpeg" alt="Rewrite a message button" style="height:16px">]. Example: I want the call to happen asap
+1. Continuing on workstation 1’s  Webex App.  Type any question in chat window and click <strong>Rewrite message</strong> [<img class="inline-icon" src="assets/source-guide/image27.jpeg" width="35" height="33" alt="Rewrite a message button" style="height:16px">]. Example: I want the call to happen asap
 
-<a class="figure-link" href="assets/source-guide/image28.png" target="_blank" rel="noopener" aria-label="Open screenshot 28 at full size"><img class="source-figure" src="assets/source-guide/image28.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image28.png" target="_blank" rel="noopener" aria-label="Open screenshot 28 at full size"><img class="source-figure" src="assets/source-guide/image28.png" width="2686" height="1462" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
 AI Assistant analyzes your message and provides options to fix mistakes, improve spelling and grammar, update format and style, and change the message tone.
 
-2. It will open the <strong>rewrite</strong> pop-up window.  Choose any of the available drop-down options to rewrite your message and click <strong>Apply</strong> to generate a preview.  You can click [ <img class="inline-icon" src="assets/source-guide/image29.jpeg" alt="Webex control icon 29" style="height:16px">] to generate more preview versions. To go back and forth between versions, click the left and right arrows.  Finally when you are satisfied with a new version the message, click <strong>Update message</strong>, or if you wish to use your original message you can discard all changes by clicking <strong>Cancel</strong>.  For now keep the message generated with AI (with all your desired options) and press <strong>Enter</strong> to send your updated message. See the screenshots below for an example
+2. It will open the <strong>rewrite</strong> pop-up window.  Choose any of the available drop-down options to rewrite your message and click <strong>Apply</strong> to generate a preview.  You can click [ <img class="inline-icon" src="assets/source-guide/image29.jpeg" width="22" height="22" alt="Webex control icon 29" style="height:16px">] to generate more preview versions. To go back and forth between versions, click the left and right arrows.  Finally when you are satisfied with a new version the message, click <strong>Update message</strong>, or if you wish to use your original message you can discard all changes by clicking <strong>Cancel</strong>.  For now keep the message generated with AI (with all your desired options) and press <strong>Enter</strong> to send your updated message. See the screenshots below for an example
 
-<a class="figure-link" href="assets/source-guide/image30.png" target="_blank" rel="noopener" aria-label="Open screenshot 30 at full size"><img class="source-figure" src="assets/source-guide/image30.png" alt="A screenshot of a computer screen
+<a class="figure-link" href="assets/source-guide/image30.png" target="_blank" rel="noopener" aria-label="Open screenshot 30 at full size"><img class="source-figure" src="assets/source-guide/image30.png" width="1340" height="1256" alt="A screenshot of a computer screen
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image31.png" target="_blank" rel="noopener" aria-label="Open screenshot 31 at full size"><img class="source-figure" src="assets/source-guide/image31.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image31.png" target="_blank" rel="noopener" aria-label="Open screenshot 31 at full size"><img class="source-figure" src="assets/source-guide/image31.png" width="2686" height="1466" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
@@ -202,19 +202,19 @@ To translate messages in a space from any language to your desired language, sel
 
 2. It will bring up Webex Settings pop-up window.  On the pop-up window select <strong>General &gt; Translation language.  </strong>Select your <strong>preferred language for translation</strong> from the drop-down list, and click <strong>Save</strong>.
 
-   <a class="figure-link" href="assets/source-guide/image33.png" target="_blank" rel="noopener" aria-label="Open screenshot 33 at full size"><img class="source-figure" src="assets/source-guide/image33.png" alt="Lab guide screenshot 33" loading="lazy" decoding="async"></a>
+   <a class="figure-link" href="assets/source-guide/image33.png" target="_blank" rel="noopener" aria-label="Open screenshot 33 at full size"><img class="source-figure" src="assets/source-guide/image33.png" width="822" height="660" alt="Lab guide screenshot 33" loading="lazy" decoding="async"></a>
 
 3. Now, you can either translate any <strong>individual</strong> message in a space to your selected language Or you can translate all the messages in a space by going to the <strong>space settings menu</strong> and selecting <strong>Start live translation</strong>, that will translate all the messages in space.   See the screenshots below for reference.
 
-<a class="figure-link" href="assets/source-guide/image34.png" target="_blank" rel="noopener" aria-label="Open screenshot 34 at full size"><img class="source-figure" src="assets/source-guide/image34.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image34.png" target="_blank" rel="noopener" aria-label="Open screenshot 34 at full size"><img class="source-figure" src="assets/source-guide/image34.png" width="1780" height="1364" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
- <a class="figure-link" href="assets/source-guide/image35.png" target="_blank" rel="noopener" aria-label="Open screenshot 35 at full size"><img class="source-figure" src="assets/source-guide/image35.png" alt="Lab guide screenshot 35" loading="lazy" decoding="async"></a>
+ <a class="figure-link" href="assets/source-guide/image35.png" target="_blank" rel="noopener" aria-label="Open screenshot 35 at full size"><img class="source-figure" src="assets/source-guide/image35.png" width="681" height="610" alt="Lab guide screenshot 35" loading="lazy" decoding="async"></a>
 
- <a class="figure-link" href="assets/source-guide/image36.png" target="_blank" rel="noopener" aria-label="Open screenshot 36 at full size"><img class="source-figure" src="assets/source-guide/image36.png" alt="Lab guide screenshot 36" loading="lazy" decoding="async"></a>
+ <a class="figure-link" href="assets/source-guide/image36.png" target="_blank" rel="noopener" aria-label="Open screenshot 36 at full size"><img class="source-figure" src="assets/source-guide/image36.png" width="780" height="614" alt="Lab guide screenshot 36" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image37.png" target="_blank" rel="noopener" aria-label="Open screenshot 37 at full size"><img class="source-figure" src="assets/source-guide/image37.png" alt="Lab guide screenshot 37" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image37.png" target="_blank" rel="noopener" aria-label="Open screenshot 37 at full size"><img class="source-figure" src="assets/source-guide/image37.png" width="666" height="608" alt="Lab guide screenshot 37" loading="lazy" decoding="async"></a>
 
 NOTE: Sometimes the live translation takes couple of seconds or few messages to start working. 
 
@@ -244,7 +244,7 @@ In this lab we will use the latest method to schedule a Webex Meeting – via th
 
 2. In the Webex App, open the meetings tab and expand the Cisco AI Assistant
 
- <a class="figure-link" href="assets/source-guide/image38.png" target="_blank" rel="noopener" aria-label="Open screenshot 38 at full size"><img class="source-figure" src="assets/source-guide/image38.png" alt="Lab guide screenshot 38" loading="lazy" decoding="async"></a>
+ <a class="figure-link" href="assets/source-guide/image38.png" target="_blank" rel="noopener" aria-label="Open screenshot 38 at full size"><img class="source-figure" src="assets/source-guide/image38.png" width="1858" height="1048" alt="Lab guide screenshot 38" loading="lazy" decoding="async"></a>
 
 3. In the <strong>Ask AI Assistant</strong> window, we will converse with the assistant to schedule a meeting on our behalf. Below is an example of some text you can type to schedule the meeting
 
@@ -256,7 +256,7 @@ In this lab we will use the latest method to schedule a Webex Meeting – via th
 
 4. The assistant will capture the information and summarize the request. It may suggest additional times if the requested time does not suit all attendees. Feel free to update anything by further conversation or confirm.
 
-<a class="figure-link" href="assets/source-guide/image40.png" target="_blank" rel="noopener" aria-label="Open screenshot 40 at full size"><img class="source-figure" src="assets/source-guide/image40.png" alt="Lab guide screenshot 40" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image40.png" target="_blank" rel="noopener" aria-label="Open screenshot 40 at full size"><img class="source-figure" src="assets/source-guide/image40.png" width="544" height="1128" alt="Lab guide screenshot 40" loading="lazy" decoding="async"></a>
 
 5. The assistant will go ahead and schedule the Webex meeting
 
@@ -272,41 +272,41 @@ In <strong>Webex Meetings, </strong>powered by AI, Webex can automatically detec
 
 3.  On the site options page, scroll down to Closed captioning configuration and toggle ON the option <strong>Allow real-time translation and transcription in multiple languages</strong>.  Click <strong>Save</strong>.
 
-<a class="figure-link" href="assets/source-guide/image42.png" target="_blank" rel="noopener" aria-label="Open screenshot 42 at full size"><img class="source-figure" src="assets/source-guide/image42.png" alt="Lab guide screenshot 42" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image42.png" target="_blank" rel="noopener" aria-label="Open screenshot 42 at full size"><img class="source-figure" src="assets/source-guide/image42.png" width="2898" height="660" alt="Lab guide screenshot 42" loading="lazy" decoding="async"></a>
 
-4. On workstation 1 bring up Webex.  There will be a meeting scheduled from the previous module and it will display <strong>One Button to Join</strong> (OBTJ) the meeting.  Click on <strong>Start</strong> to start the meeting.  It will bring up the meeting window, click <strong>Start meeting</strong>.  Once the meeting is started, click <strong>Closed Captions</strong> [<img class="inline-icon" src="assets/source-guide/image43.png" alt="A white text in a speech bubble
+4. On workstation 1 bring up Webex.  There will be a meeting scheduled from the previous module and it will display <strong>One Button to Join</strong> (OBTJ) the meeting.  Click on <strong>Start</strong> to start the meeting.  It will bring up the meeting window, click <strong>Start meeting</strong>.  Once the meeting is started, click <strong>Closed Captions</strong> [<img class="inline-icon" src="assets/source-guide/image43.png" width="122" height="58" alt="A white text in a speech bubble
 
 AI-generated content may be incorrect." style="height:17px">]  (towards bottom left of the meeting window) 
 
 5. Now go to browser tab where you have connected to the Antia Perez workstation (Virtual workstation) over WebRDP.  There will be a meeting reminder (notification) to join the meeting on the click <strong>Join</strong> on the reminder to join the meeting. It will launch the meeting window, click <strong>Start meeting</strong>.  
 
-<a class="figure-link" href="assets/source-guide/image44.png" target="_blank" rel="noopener" aria-label="Open screenshot 44 at full size"><img class="source-figure" src="assets/source-guide/image44.png" alt="Lab guide screenshot 44" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image44.png" target="_blank" rel="noopener" aria-label="Open screenshot 44 at full size"><img class="source-figure" src="assets/source-guide/image44.png" width="690" height="346" alt="Lab guide screenshot 44" loading="lazy" decoding="async"></a>
 
-6. <strong>Ignore</strong> the warning about microphone on virtual workstation.  Click <strong>Join</strong> <strong>meeting</strong> on meeting window.   Once the meeting is joined, click <strong>Closed Captions</strong> [<img class="inline-icon" src="assets/source-guide/image43.png" alt="A white text in a speech bubble
+6. <strong>Ignore</strong> the warning about microphone on virtual workstation.  Click <strong>Join</strong> <strong>meeting</strong> on meeting window.   Once the meeting is joined, click <strong>Closed Captions</strong> [<img class="inline-icon" src="assets/source-guide/image43.png" width="122" height="58" alt="A white text in a speech bubble
 
 AI-generated content may be incorrect." style="height:17px">]  (towards bottom left corner of the meeting window) on Anita Workstation as well (Virtual workstation).
 
 7. Once Closed Captions are enabled on Anita workstation, observe that it gives options for <strong>Spoken language </strong>and <strong>Caption language</strong>.  Make sure <strong>Caption</strong><strong> </strong><strong>language</strong> is selected as <strong>English</strong>. 
 
-<a class="figure-link" href="assets/source-guide/image45.png" target="_blank" rel="noopener" aria-label="Open screenshot 45 at full size"><img class="source-figure" src="assets/source-guide/image45.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image45.png" target="_blank" rel="noopener" aria-label="Open screenshot 45 at full size"><img class="source-figure" src="assets/source-guide/image45.png" width="682" height="392" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-8. Go back to workstation 1’s Webex App (logged in as Charles Holland) meeting window and click on drop down arrow, next to Closed Captions icon [<img class="inline-icon" src="assets/source-guide/image43.png" alt="A white text in a speech bubble
+8. Go back to workstation 1’s Webex App (logged in as Charles Holland) meeting window and click on drop down arrow, next to Closed Captions icon [<img class="inline-icon" src="assets/source-guide/image43.png" width="122" height="58" alt="A white text in a speech bubble
 
 AI-generated content may be incorrect." style="height:17px">],  to see the current <strong>Spoken language</strong> and <strong>Caption language</strong>.  DO NOT change any settings. 
 
-<a class="figure-link" href="assets/source-guide/image46.png" target="_blank" rel="noopener" aria-label="Open screenshot 46 at full size"><img class="source-figure" src="assets/source-guide/image46.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image46.png" target="_blank" rel="noopener" aria-label="Open screenshot 46 at full size"><img class="source-figure" src="assets/source-guide/image46.png" width="484" height="370" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-9. Now, on workstation 1’s meeting window (logged in as Charles Holland) start talking a few sentences in a different language (could be <strong>French</strong> or <strong>German</strong> or <strong>Hindi</strong> etc.,).  Once you have talked around 3 to 5 sentences, notice that Webex AI will auto detect the <strong>Spoken language</strong> and update it on Anita’s workstation 2 under <img class="inline-icon" src="assets/source-guide/image43.png" alt="A white text in a speech bubble
+9. Now, on workstation 1’s meeting window (logged in as Charles Holland) start talking a few sentences in a different language (could be <strong>French</strong> or <strong>German</strong> or <strong>Hindi</strong> etc.,).  Once you have talked around 3 to 5 sentences, notice that Webex AI will auto detect the <strong>Spoken language</strong> and update it on Anita’s workstation 2 under <img class="inline-icon" src="assets/source-guide/image43.png" width="122" height="58" alt="A white text in a speech bubble
 
 AI-generated content may be incorrect." style="height:17px">.  Also, as the Caption language is chosen as <strong>English, </strong>Webex<strong> </strong>AI will translate them to English and display on both workstations. 
 
-<a class="figure-link" href="assets/source-guide/image47.png" target="_blank" rel="noopener" aria-label="Open screenshot 47 at full size"><img class="source-figure" src="assets/source-guide/image47.png" alt="Lab guide screenshot 47" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image47.png" target="_blank" rel="noopener" aria-label="Open screenshot 47 at full size"><img class="source-figure" src="assets/source-guide/image47.png" width="2296" height="978" alt="Lab guide screenshot 47" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image48.png" target="_blank" rel="noopener" aria-label="Open screenshot 48 at full size"><img class="source-figure" src="assets/source-guide/image48.png" alt="Lab guide screenshot 48" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image48.png" target="_blank" rel="noopener" aria-label="Open screenshot 48 at full size"><img class="source-figure" src="assets/source-guide/image48.png" width="3868" height="1390" alt="Lab guide screenshot 48" loading="lazy" decoding="async"></a>
 
 Also, if Webex AI is taking long to detect the spoken language, could be due to background noise or you are in a crowded environment etc., you can drop down the <strong>Spoke language</strong> and <strong>Caption language</strong> options and select the language manually from supported list of languages.  For the up-to-date supported languages refer to below URL.
 
@@ -314,15 +314,15 @@ Also, if Webex AI is taking long to detect the spoken language, could be due to 
 
 10. Now, switch back to Antia workstation (workstation 2) over WebRDP, drop down option for <strong>Caption language</strong> and set it to one of the available languages.   Example:  <strong>bosanski</strong><strong>/Bosnian</strong>
 
-<a class="figure-link" href="assets/source-guide/image49.png" target="_blank" rel="noopener" aria-label="Open screenshot 49 at full size"><img class="source-figure" src="assets/source-guide/image49.png" alt="Lab guide screenshot 49" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image49.png" target="_blank" rel="noopener" aria-label="Open screenshot 49 at full size"><img class="source-figure" src="assets/source-guide/image49.png" width="1438" height="1436" alt="Lab guide screenshot 49" loading="lazy" decoding="async"></a>
 
 11. On Charles meeting window (workstation 1), manually set the <strong>Spoken language</strong> to <strong>English</strong> (or any other language). Change the <strong>Caption language</strong> to <strong>French</strong> (or any other language). Once you have set the desired languages, start talking in <strong>English</strong>.
 
 12. Notice that both the workstations display captions in their respective selected Caption languages. 
 
-<a class="figure-link" href="assets/source-guide/image50.png" target="_blank" rel="noopener" aria-label="Open screenshot 50 at full size"><img class="source-figure" src="assets/source-guide/image50.png" alt="Lab guide screenshot 50" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image50.png" target="_blank" rel="noopener" aria-label="Open screenshot 50 at full size"><img class="source-figure" src="assets/source-guide/image50.png" width="2278" height="976" alt="Lab guide screenshot 50" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image51.png" target="_blank" rel="noopener" aria-label="Open screenshot 51 at full size"><img class="source-figure" src="assets/source-guide/image51.png" alt="Lab guide screenshot 51" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image51.png" target="_blank" rel="noopener" aria-label="Open screenshot 51 at full size"><img class="source-figure" src="assets/source-guide/image51.png" width="957" height="343" alt="Lab guide screenshot 51" loading="lazy" decoding="async"></a>
 
 13. If you are interested to explore further, you can choose to select any set of different languages and observe that <strong>Webex AI</strong> will auto detect <strong>Spoken language</strong> (or you can set it manually) and translate it to desired/chosen <strong>Caption language</strong>.   
 
@@ -336,7 +336,7 @@ Now, let&#x27;s add/enable Cisco AI Assistant to this meeting and see how it hel
 
 2. On workstation 1’s meeting window, click <strong>AI Assistant</strong>. It will bring up a pop-up window to <strong>Start </strong>the<strong> AI Assistant for this meeting</strong>.  Click <strong>Start</strong>.  
 
-<a class="figure-link" href="assets/source-guide/image52.png" target="_blank" rel="noopener" aria-label="Open screenshot 52 at full size"><img class="source-figure" src="assets/source-guide/image52.png" alt="A screenshot of a video call
+<a class="figure-link" href="assets/source-guide/image52.png" target="_blank" rel="noopener" aria-label="Open screenshot 52 at full size"><img class="source-figure" src="assets/source-guide/image52.png" width="1960" height="974" alt="A screenshot of a video call
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
@@ -344,7 +344,7 @@ AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
 4. Now, click <strong>Record</strong> button on the meeting window, to start recording of this meeting. It will bring up a pop-up window with available options for recording, leave all defaults and click <strong>Record</strong> again on the pop-up window.
 
-<a class="figure-link" href="assets/source-guide/image53.png" target="_blank" rel="noopener" aria-label="Open screenshot 53 at full size"><img class="source-figure" src="assets/source-guide/image53.png" alt="A screenshot of a video recording
+<a class="figure-link" href="assets/source-guide/image53.png" target="_blank" rel="noopener" aria-label="Open screenshot 53 at full size"><img class="source-figure" src="assets/source-guide/image53.png" width="2266" height="998" alt="A screenshot of a video recording
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
@@ -354,29 +354,29 @@ AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
 7. Now, go to Anita’s workstation (workstation 1) over WebRDP and the current meeting window. Explore any of the <strong>AI Assistant</strong> options available:  <strong>Catch</strong><strong> me up</strong> or <strong>Was</strong><strong> my name mentioned</strong>? Or <strong>What are the action items</strong>?
 
-<a class="figure-link" href="assets/source-guide/image54.png" target="_blank" rel="noopener" aria-label="Open screenshot 54 at full size"><img class="source-figure" src="assets/source-guide/image54.png" alt="A screenshot of a video chat
+<a class="figure-link" href="assets/source-guide/image54.png" target="_blank" rel="noopener" aria-label="Open screenshot 54 at full size"><img class="source-figure" src="assets/source-guide/image54.png" width="1882" height="1230" alt="A screenshot of a video chat
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image55.png" target="_blank" rel="noopener" aria-label="Open screenshot 55 at full size"><img class="source-figure" src="assets/source-guide/image55.png" alt="A screenshot of a video chat
+<a class="figure-link" href="assets/source-guide/image55.png" target="_blank" rel="noopener" aria-label="Open screenshot 55 at full size"><img class="source-figure" src="assets/source-guide/image55.png" width="1870" height="1232" alt="A screenshot of a video chat
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image56.png" target="_blank" rel="noopener" aria-label="Open screenshot 56 at full size"><img class="source-figure" src="assets/source-guide/image56.png" alt="A screenshot of a video chat
+<a class="figure-link" href="assets/source-guide/image56.png" target="_blank" rel="noopener" aria-label="Open screenshot 56 at full size"><img class="source-figure" src="assets/source-guide/image56.png" width="1890" height="1222" alt="A screenshot of a video chat
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
 8. You can also ask anything about this meeting like what are the <strong>highlights</strong>? Or how was the <strong>customer respons</strong>e etc. On the current meeting window, type what you want to ask (in <strong>Ask me anything about this meeting </strong>window).  <strong>AI assistant</strong> will answer your meeting depending upon information available from this meeting summary.
 
-<a class="figure-link" href="assets/source-guide/image57.png" target="_blank" rel="noopener" aria-label="Open screenshot 57 at full size"><img class="source-figure" src="assets/source-guide/image57.png" alt="A screenshot of a video chat
+<a class="figure-link" href="assets/source-guide/image57.png" target="_blank" rel="noopener" aria-label="Open screenshot 57 at full size"><img class="source-figure" src="assets/source-guide/image57.png" width="1890" height="1230" alt="A screenshot of a video chat
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image58.png" target="_blank" rel="noopener" aria-label="Open screenshot 58 at full size"><img class="source-figure" src="assets/source-guide/image58.png" alt="A screenshot of a video chat
+<a class="figure-link" href="assets/source-guide/image58.png" target="_blank" rel="noopener" aria-label="Open screenshot 58 at full size"><img class="source-figure" src="assets/source-guide/image58.png" width="1902" height="1232" alt="A screenshot of a video chat
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-9. You can explore and ask more questions about the meeting and when done, end the meeting [<img class="inline-icon" src="assets/source-guide/image59.png" alt="A red circle with a white x in it
+9. You can explore and ask more questions about the meeting and when done, end the meeting [<img class="inline-icon" src="assets/source-guide/image59.png" width="54" height="58" alt="A red circle with a white x in it
 
 AI-generated content may be incorrect." style="height:16px">] on both the workstations.
 
@@ -384,11 +384,11 @@ AI-generated content may be incorrect." style="height:16px">] on both the workst
 
 11. It will bring up the Webex meeting summary and transcript as shown below.
 
-<a class="figure-link" href="assets/source-guide/image60.png" target="_blank" rel="noopener" aria-label="Open screenshot 60 at full size"><img class="source-figure" src="assets/source-guide/image60.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image60.png" target="_blank" rel="noopener" aria-label="Open screenshot 60 at full size"><img class="source-figure" src="assets/source-guide/image60.png" width="1464" height="526" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image61.png" target="_blank" rel="noopener" aria-label="Open screenshot 61 at full size"><img class="source-figure" src="assets/source-guide/image61.png" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image61.png" target="_blank" rel="noopener" aria-label="Open screenshot 61 at full size"><img class="source-figure" src="assets/source-guide/image61.png" width="1468" height="954" alt="A screenshot of a computer
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
