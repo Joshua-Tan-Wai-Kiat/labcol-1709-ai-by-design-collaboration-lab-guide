@@ -1,61 +1,17 @@
-"""Build the public guide with Python's standard library."""
+"""Build the Word-faithful public guide using only the Python standard library."""
 from pathlib import Path
-import base64
-import html
-import re
+from html import escape
+import json
 
-ROOT = Path(__file__).resolve().parent
-
-def anchor(text):
-    return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
-
-def inline(text):
-    safe = html.escape(text)
-    def link(match):
-        url = match[0].rstrip('.,:!?)')
-        suffix = match[0][len(url):]
-        return f'<a href="{url}">{url}</a>{suffix}'
-    return re.sub(r'https://[^\s<>]+', link, safe)
-
+ROOT=Path(__file__).resolve().parent
 def build():
-    blocks = ROOT.joinpath('GUIDE.md').read_text(encoding='utf-8').strip().split('\n\n')
-    content, navigation = ['<div class="cover">'], []
-    cover_open = True
-    for block in blocks:
-        match = re.match(r'^(#{1,3}) (.+)$', block)
-        if match:
-            level, title = len(match[1]), match[2]
-            if level == 2 and cover_open:
-                content.append('</div>')
-                cover_open = False
-            key = anchor(title)
-            content.append(f'<h{level} id="{key}">{html.escape(title)}</h{level}>')
-            if level > 1:
-                navigation.append(f'<li class="level-{level}"><a href="#{key}">{html.escape(title)}</a></li>')
-        elif block.startswith('> '):
-            content.append(f'<aside>{inline(block[2:])}</aside>')
-        elif block.startswith('![Webex lab environment'):
-            content.append('<figure>' + ROOT.joinpath('lab-topology.svg').read_text(encoding='utf-8') + '<figcaption>Figure 1. Logical Webex lab environment</figcaption></figure>')
-        elif block.startswith('- '):
-            content.append('<ul class="objectives">' + ''.join(f'<li>{inline(line[2:])}</li>' for line in block.splitlines()) + '</ul>')
-        elif block.startswith('| '):
-            rows = [[cell.strip() for cell in line.strip('|').split('|')] for line in block.splitlines()]
-            content.append('<div class="table-wrap"><table><thead><tr>' + ''.join(f'<th scope="col">{inline(c)}</th>' for c in rows[0]) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{inline(c)}</td>' for c in row) + '</tr>' for row in rows[2:]) + '</tbody></table></div>')
-        else:
-            content.append(f'<p>{inline(block)}</p>')
-    banner = base64.b64encode(ROOT.joinpath('template-banner.jpg').read_bytes()).decode('ascii')
-    logo = base64.b64encode(ROOT.joinpath('template-logo.png').read_bytes()).decode('ascii')
-    page = '''<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LABCOL-1709 | AI by Design for Collaboration</title>
-<style>
-:root{color-scheme:light;--navy:#0d274d}*{box-sizing:border-box}body{margin:0;color:#17243a;background:#f4f5f7;font:16px/1.6 "Inter Medium",Inter,Arial,sans-serif}a{color:var(--navy)}header{background:#06182a}header img{width:100%;height:auto;max-width:1600px;display:block;margin:auto}nav{position:sticky;top:24px;align-self:start;background:white;padding:24px;max-height:90vh;overflow:auto;font-size:14px}nav ul{list-style:none;margin:0;padding:0}nav li{margin:10px 0}nav .level-3{padding-left:14px;font-size:13px}main{background:white;padding:44px 54px;min-width:0;border-top:4px solid var(--navy)}section{display:grid;grid-template-columns:285px minmax(0,1fr);gap:24px;max-width:1350px;margin:28px auto;padding:0 24px}h1{line-height:1.15;color:var(--navy);font-size:40px;margin-top:0;max-width:650px}h2{color:var(--navy);font-size:25px;margin-top:44px}h3{color:var(--navy);font-size:20px;margin-top:28px}h1,h2,h3{scroll-margin-top:24px}p{overflow-wrap:anywhere;margin:14px 0}li{margin:8px 0}figure{margin:24px 0}figure svg{width:100%;height:auto;display:block}figcaption{font-size:13px;color:#526076;margin-top:8px;text-align:center}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:16px}th,td{border-bottom:1px solid #0877ad;padding:12px 14px;text-align:center;vertical-align:top}th{color:var(--navy);font-size:20px}.cover{text-align:center;padding:28px 0 34px}.cover h1{margin-left:auto;margin-right:auto}footer{padding:26px;text-align:center;font-size:13px}.brand-logo{width:160px;display:block;margin:0 auto 14px}nav a{text-decoration:none}nav a:hover{text-decoration:underline}.skip{position:absolute;left:-9999px}.skip:focus{left:10px;top:10px;background:white;padding:10px;z-index:9}@media(max-width:850px){section{display:block;padding:0 12px}nav{position:static;max-height:none;margin-bottom:20px}main{padding:26px 22px}h1{font-size:32px}h2{font-size:24px}}@media print{@page{size:A4;margin:20mm 20mm 22mm}body{background:white;font-size:10pt}header{background:white}nav,footer{display:none}section{display:block;margin:0;padding:0}main{padding:8mm 0;border:0}h1{font-size:24pt}h2{font-size:14pt;break-after:avoid}h3{font-size:14pt;break-after:avoid}h2[id^="task-"]{break-before:page}figure,table{break-inside:avoid}a{text-decoration:none}header img{max-height:20mm;width:100%;object-fit:cover}}
-</style></head><body><a class="skip" href="#guide">Skip to lab guide</a>
-<header><img alt="Cisco Live Melbourne November 9–12, 2026" src="data:image/jpeg;base64,''' + banner + '''"></header>
-<section><nav aria-label="Lab contents"><strong>Lab contents</strong><ul>''' + ''.join(navigation) + '</ul></nav><main id="guide">' + '\n'.join(content) + '''</main></section>
-<footer><img class="brand-logo" alt="Cisco Live" src="data:image/png;base64,''' + logo + '''"><a href="LABCOL-1709-AI-by-Design-Lab-Guide.docx">Download Word guide</a> · <a href="GUIDE.md">Markdown source</a> · <a href="https://github.com/Joshua-Tan-Wai-Kiat/labcol-1709-ai-by-design-collaboration-lab-guide">GitHub repository</a></footer></body></html>'''
-    ROOT.joinpath('index.html').write_text(page, encoding='utf-8')
-    print(f'Built {len(blocks)} content blocks and {len(navigation)} navigation links.')
+    source=json.loads(ROOT.joinpath('source-manifest.json').read_text(encoding='utf-8'))
+    content=ROOT.joinpath('content.html').read_text(encoding='utf-8')
+    navigation=''.join(f'<li class="level-{h["level"]}"><a href="#{h["id"]}">{escape(h["title"])}</a></li>' for h in source['headings'])
+    page='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Cisco Live Melbourne LABCOL-1709 AI by Design for Collaboration lab guide."><title>LABCOL-1709 | AI by Design for Collaboration</title><style>
+:root{color-scheme:light;--navy:#0d274d;--link:#075798}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#19263b;background:#f3f5f7;font:17px/1.65 Inter,Arial,sans-serif}a{color:var(--link)}header{background:#06182b}header img{display:block;width:100%;max-width:1600px;height:auto;margin:auto}.layout{display:grid;grid-template-columns:275px minmax(0,1fr);gap:28px;max-width:1460px;margin:30px auto;padding:0 24px}nav{position:sticky;top:20px;align-self:start;background:#fff;padding:21px 20px;max-height:92vh;overflow:auto;font-size:14px}nav ul{list-style:none;margin:15px 0 0;padding:0}nav li{margin:10px 0}nav a{text-decoration:none}nav a:hover,nav a:focus{text-decoration:underline}nav .level-3{padding-left:16px;font-size:13px}summary{cursor:pointer;font-weight:bold;color:var(--navy)}main{min-width:0;background:white;border-top:4px solid var(--navy);padding:40px 54px}.cover{text-align:center;padding:40px 0 60px}.cover h1{font-size:40px;line-height:1.2;max-width:650px;margin:0 auto 20px}.cover p{margin:12px 0;font-size:21px}.cover .session-id{font-size:28px;font-weight:700;margin:20px 0 30px}h1,h2,h3{color:var(--navy);scroll-margin-top:22px}h2{font-size:28px;line-height:1.3;margin:50px 0 22px}h3{font-size:23px;line-height:1.35;margin:34px 0 18px}.paragraph-content{min-width:0;overflow-wrap:anywhere}.paragraph-content:empty{display:none}main>div:not(.cover){margin:15px 0}.source-step{display:grid;grid-template-columns:30px minmax(0,1fr);gap:9px}.step-number{font-variant-numeric:tabular-nums;color:#152843}.figure-paragraph{padding:8px 0}.figure-link{display:block;margin:22px auto;max-width:100%}.figure-link:focus{outline:3px solid #067ab4;outline-offset:4px}.source-figure{display:block;max-width:100%;width:auto;height:auto;margin:auto}.inline-icon{display:inline-block;width:auto;max-width:100%;vertical-align:middle;margin:0 3px}mark{background:#fff19a;color:inherit}.omitted-figure{display:block;font-size:14px;color:#536073;border-left:3px solid #c3cad4;padding:9px 14px;margin:16px 0}footer{text-align:center;font-size:13px;color:#526177;padding:30px 24px 40px;max-width:1000px;margin:auto}footer img{display:block;width:170px;height:auto;margin:0 auto 22px}.skip{position:absolute;left:-9999px}.skip:focus{left:10px;top:10px;z-index:5;background:white;padding:10px}a:focus-visible,summary:focus-visible{outline:3px solid #1d90bd;outline-offset:3px}@media(max-width:950px){.layout{grid-template-columns:230px minmax(0,1fr);gap:18px;padding:0 15px}main{padding:32px 30px}}@media(max-width:760px){.layout{display:block;padding:0 12px;margin:18px auto}nav{position:static;max-height:55vh;margin-bottom:20px;padding:17px 20px}main{padding:28px 20px}.cover{padding:22px 0 38px}.cover h1{font-size:31px}.cover p{font-size:18px}h2{font-size:25px}h3{font-size:22px}.source-step{grid-template-columns:25px minmax(0,1fr);gap:5px}}@media print{@page{size:A4;margin:18mm}html{scroll-behavior:auto}body{background:white;font-size:11pt}nav,.skip,footer{display:none}.layout{display:block;padding:0;margin:0}main{padding:0;border:0}.cover{break-after:page;padding:40mm 0}h2,h3{break-after:avoid}.figure-link{break-inside:avoid}.source-figure{max-height:235mm;object-fit:contain}h2{font-size:18pt}h3{font-size:14pt}}
+</style></head><body><a class="skip" href="#guide">Skip to lab guide</a><header><img src="assets/source-guide/image2.jpg" alt="Cisco Live Melbourne November 9–12, 2026"></header><div class="layout"><nav aria-label="Lab contents"><details id="contents" open><summary>Table of Contents</summary><ul>'''+navigation+'''</ul></details></nav><main id="guide">'''+content+'''</main></div><footer><img src="assets/source-guide/image3.png" alt="Cisco Live"><p>Online edition synchronized with the supplied Word guide on 27 October 2026. Instructional wording and screenshots follow that document. Word page numbers are replaced by section links. Example passwords, session access details, password rules, and screenshots containing private account details are omitted from this public edition.</p><p><a href="GUIDE.md">Guide source</a> · <a href="https://github.com/Joshua-Tan-Wai-Kiat/labcol-1709-ai-by-design-collaboration-lab-guide">GitHub repository</a></p></footer><script>if(window.matchMedia('(max-width:760px)').matches)document.getElementById('contents').open=false;</script></body></html>'''
+    ROOT.joinpath('index.html').write_text(page,encoding='utf-8')
+    print(f"Built {source['source_blocks']} source blocks, {len(source['headings'])} section links, and {len(source['included_images'])} images.")
 
-if __name__ == '__main__':
-    build()
+if __name__=='__main__':build()

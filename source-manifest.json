@@ -1,0 +1,850 @@
+{
+  "source_filename": "CLMEL26 - LABCOL-1709 AI by Design for Collaboration - Lab Guide (2).docx",
+  "source_sha256": "102dba127b5ef4b9002cf3f3319385491471c331d655e59caa682992580483d2",
+  "updated": "2026-10-27",
+  "source_blocks": 170,
+  "headings": [
+    {
+      "level": 2,
+      "title": "Webex Suite AI Overview",
+      "id": "webex-suite-ai-overview"
+    },
+    {
+      "level": 2,
+      "title": "Accessing your Lab",
+      "id": "accessing-your-lab"
+    },
+    {
+      "level": 2,
+      "title": "Connect to the Workstations via Remote Desktop",
+      "id": "connect-to-the-workstations-via-remote-desktop"
+    },
+    {
+      "level": 2,
+      "title": "Login to the Webex Clients",
+      "id": "login-to-the-webex-clients"
+    },
+    {
+      "level": 2,
+      "title": "Login to Collaboration Control Hub from within Workstation 1",
+      "id": "login-to-collaboration-control-hub-from-within-workstation-1"
+    },
+    {
+      "level": 3,
+      "title": "Alternate instructions for accessing Collaboration Control hub",
+      "id": "alternate-instructions-for-accessing-collaboration-control-hub"
+    },
+    {
+      "level": 2,
+      "title": "Module 1: Setup your Lab environment",
+      "id": "module-1-setup-your-lab-environment"
+    },
+    {
+      "level": 3,
+      "title": "Module 1a: Activating and configuring the Cisco AI Assistant in the Control Hub",
+      "id": "module-1a-activating-and-configuring-the-cisco-ai-assistant-in-the-control-hub"
+    },
+    {
+      "level": 2,
+      "title": "Module 2: Enhancing Messaging with Webex AI",
+      "id": "module-2-enhancing-messaging-with-webex-ai"
+    },
+    {
+      "level": 3,
+      "title": "Module 2a: Ask Me Anything: AI Assistant for Messaging",
+      "id": "module-2a-ask-me-anything-ai-assistant-for-messaging"
+    },
+    {
+      "level": 3,
+      "title": "Module 2b: Space Summaries: Automated Conversation Overviews",
+      "id": "module-2b-space-summaries-automated-conversation-overviews"
+    },
+    {
+      "level": 3,
+      "title": "Module 2c: Smart Rewrite: AI-Powered Message Refinement",
+      "id": "module-2c-smart-rewrite-ai-powered-message-refinement"
+    },
+    {
+      "level": 3,
+      "title": "Module 2d: Real-Time Message Translation",
+      "id": "module-2d-real-time-message-translation"
+    },
+    {
+      "level": 2,
+      "title": "Module 3: AI-Powered Webex Meetings",
+      "id": "module-3-ai-powered-webex-meetings"
+    },
+    {
+      "level": 3,
+      "title": "Module 3a: Schedule your meetings with Cisco AI Assistant",
+      "id": "module-3a-schedule-your-meetings-with-cisco-ai-assistant"
+    },
+    {
+      "level": 3,
+      "title": "Module 3b: Language detection, Closed Captions and Real time translation",
+      "id": "module-3b-language-detection-closed-captions-and-real-time-translation"
+    },
+    {
+      "level": 3,
+      "title": "Module 3c: AI Assistant in Webex Meetings",
+      "id": "module-3c-ai-assistant-in-webex-meetings"
+    }
+  ],
+  "included_images": [
+    "image12.png",
+    "image13.png",
+    "image14.png",
+    "image15.png",
+    "image16.png",
+    "image17.png",
+    "image18.jpeg",
+    "image19.jpeg",
+    "image2.jpg",
+    "image20.jpeg",
+    "image21.png",
+    "image22.png",
+    "image23.png",
+    "image24.png",
+    "image25.png",
+    "image26.png",
+    "image27.jpeg",
+    "image28.png",
+    "image29.jpeg",
+    "image3.png",
+    "image30.png",
+    "image31.png",
+    "image33.png",
+    "image34.png",
+    "image35.png",
+    "image36.png",
+    "image37.png",
+    "image38.png",
+    "image40.png",
+    "image42.png",
+    "image43.png",
+    "image44.png",
+    "image45.png",
+    "image46.png",
+    "image47.png",
+    "image48.png",
+    "image49.png",
+    "image50.png",
+    "image51.png",
+    "image52.png",
+    "image53.png",
+    "image54.png",
+    "image55.png",
+    "image56.png",
+    "image57.png",
+    "image58.png",
+    "image59.png",
+    "image60.png",
+    "image61.png",
+    "image7.png"
+  ],
+  "omitted_images": {
+    "image4": "Example VPN credentials and session identifier",
+    "image5": "Example VPN account",
+    "image6": "Workstation credentials and session identifier",
+    "image8": "Password and administrator account",
+    "image9": "Passwords and session details",
+    "image10": "Example session DNS and identifier",
+    "image11": "Passwords and administrator account",
+    "image32": "Private account email and phone number",
+    "image39": "Password and administrator account",
+    "image41": "Tenant subscription identifier and session site"
+  },
+  "privacy_replacement_blocks": [
+    29,
+    30,
+    31,
+    71,
+    73,
+    75,
+    77,
+    80
+  ],
+  "fidelity": "All other instructional wording, section order, lists, emphasis, inline icons and yellow highlights are preserved. The Word table of contents page numbers are replaced with web links. Empty layout paragraphs and Word page breaks are not reproduced.",
+  "source_block_audit": [
+    {
+      "block": 19,
+      "status": "exact text"
+    },
+    {
+      "block": 21,
+      "status": "exact text"
+    },
+    {
+      "block": 24,
+      "status": "exact text"
+    },
+    {
+      "block": 26,
+      "status": "exact text"
+    },
+    {
+      "block": 27,
+      "status": "exact text"
+    },
+    {
+      "block": 28,
+      "status": "exact text"
+    },
+    {
+      "block": 29,
+      "status": "private access replacement"
+    },
+    {
+      "block": 30,
+      "status": "private access replacement"
+    },
+    {
+      "block": 31,
+      "status": "private access replacement"
+    },
+    {
+      "block": 32,
+      "status": "exact text"
+    },
+    {
+      "block": 33,
+      "status": "exact text"
+    },
+    {
+      "block": 34,
+      "status": "exact text"
+    },
+    {
+      "block": 36,
+      "status": "exact text"
+    },
+    {
+      "block": 38,
+      "status": "exact text"
+    },
+    {
+      "block": 39,
+      "status": "exact text"
+    },
+    {
+      "block": 40,
+      "status": "exact text"
+    },
+    {
+      "block": 41,
+      "status": "exact text"
+    },
+    {
+      "block": 43,
+      "status": "exact text"
+    },
+    {
+      "block": 45,
+      "status": "exact text"
+    },
+    {
+      "block": 48,
+      "status": "exact text"
+    },
+    {
+      "block": 49,
+      "status": "exact text"
+    },
+    {
+      "block": 51,
+      "status": "exact text"
+    },
+    {
+      "block": 53,
+      "status": "exact text"
+    },
+    {
+      "block": 55,
+      "status": "exact text"
+    },
+    {
+      "block": 57,
+      "status": "exact text"
+    },
+    {
+      "block": 59,
+      "status": "exact text"
+    },
+    {
+      "block": 61,
+      "status": "exact text"
+    },
+    {
+      "block": 63,
+      "status": "exact text"
+    },
+    {
+      "block": 67,
+      "status": "exact text"
+    },
+    {
+      "block": 69,
+      "status": "exact text"
+    },
+    {
+      "block": 71,
+      "status": "private access replacement"
+    },
+    {
+      "block": 73,
+      "status": "private access replacement"
+    },
+    {
+      "block": 75,
+      "status": "private access replacement"
+    },
+    {
+      "block": 77,
+      "status": "private access replacement"
+    },
+    {
+      "block": 78,
+      "status": "exact text"
+    },
+    {
+      "block": 79,
+      "status": "exact text"
+    },
+    {
+      "block": 80,
+      "status": "private access replacement"
+    },
+    {
+      "block": 81,
+      "status": "exact text"
+    },
+    {
+      "block": 83,
+      "status": "exact text"
+    },
+    {
+      "block": 84,
+      "status": "exact text"
+    },
+    {
+      "block": 86,
+      "status": "exact text"
+    },
+    {
+      "block": 88,
+      "status": "exact text"
+    },
+    {
+      "block": 90,
+      "status": "exact text"
+    },
+    {
+      "block": 91,
+      "status": "exact text"
+    },
+    {
+      "block": 93,
+      "status": "exact text"
+    },
+    {
+      "block": 95,
+      "status": "exact text"
+    },
+    {
+      "block": 97,
+      "status": "exact text"
+    },
+    {
+      "block": 99,
+      "status": "exact text"
+    },
+    {
+      "block": 101,
+      "status": "exact text"
+    },
+    {
+      "block": 102,
+      "status": "exact text"
+    },
+    {
+      "block": 103,
+      "status": "exact text"
+    },
+    {
+      "block": 105,
+      "status": "exact text"
+    },
+    {
+      "block": 106,
+      "status": "exact text"
+    },
+    {
+      "block": 107,
+      "status": "exact text"
+    },
+    {
+      "block": 108,
+      "status": "exact text"
+    },
+    {
+      "block": 109,
+      "status": "exact text"
+    },
+    {
+      "block": 111,
+      "status": "exact text"
+    },
+    {
+      "block": 113,
+      "status": "exact text"
+    },
+    {
+      "block": 114,
+      "status": "exact text"
+    },
+    {
+      "block": 115,
+      "status": "exact text"
+    },
+    {
+      "block": 117,
+      "status": "exact text"
+    },
+    {
+      "block": 118,
+      "status": "exact text"
+    },
+    {
+      "block": 119,
+      "status": "exact text"
+    },
+    {
+      "block": 120,
+      "status": "exact text"
+    },
+    {
+      "block": 121,
+      "status": "exact text"
+    },
+    {
+      "block": 122,
+      "status": "exact text"
+    },
+    {
+      "block": 123,
+      "status": "exact text"
+    },
+    {
+      "block": 124,
+      "status": "exact text"
+    },
+    {
+      "block": 126,
+      "status": "exact text"
+    },
+    {
+      "block": 129,
+      "status": "exact text"
+    },
+    {
+      "block": 132,
+      "status": "exact text"
+    },
+    {
+      "block": 134,
+      "status": "exact text"
+    },
+    {
+      "block": 136,
+      "status": "exact text"
+    },
+    {
+      "block": 137,
+      "status": "exact text"
+    },
+    {
+      "block": 138,
+      "status": "exact text"
+    },
+    {
+      "block": 140,
+      "status": "exact text"
+    },
+    {
+      "block": 141,
+      "status": "exact text"
+    },
+    {
+      "block": 145,
+      "status": "exact text"
+    },
+    {
+      "block": 147,
+      "status": "exact text"
+    },
+    {
+      "block": 148,
+      "status": "exact text"
+    },
+    {
+      "block": 150,
+      "status": "exact text"
+    },
+    {
+      "block": 152,
+      "status": "exact text"
+    },
+    {
+      "block": 154,
+      "status": "exact text"
+    },
+    {
+      "block": 155,
+      "status": "exact text"
+    },
+    {
+      "block": 157,
+      "status": "exact text"
+    },
+    {
+      "block": 158,
+      "status": "exact text"
+    },
+    {
+      "block": 160,
+      "status": "exact text"
+    },
+    {
+      "block": 162,
+      "status": "exact text"
+    },
+    {
+      "block": 164,
+      "status": "exact text"
+    },
+    {
+      "block": 165,
+      "status": "exact text"
+    },
+    {
+      "block": 166,
+      "status": "exact text"
+    },
+    {
+      "block": 167,
+      "status": "exact text"
+    },
+    {
+      "block": 169,
+      "status": "exact text"
+    },
+    {
+      "block": 171,
+      "status": "exact text"
+    },
+    {
+      "block": 173,
+      "status": "exact text"
+    },
+    {
+      "block": 176,
+      "status": "exact text"
+    },
+    {
+      "block": 178,
+      "status": "exact text"
+    },
+    {
+      "block": 180,
+      "status": "exact text"
+    },
+    {
+      "block": 182,
+      "status": "exact text"
+    },
+    {
+      "block": 184,
+      "status": "exact text"
+    },
+    {
+      "block": 186,
+      "status": "exact text"
+    },
+    {
+      "block": 187,
+      "status": "exact text"
+    },
+    {
+      "block": 188,
+      "status": "exact text"
+    },
+    {
+      "block": 189,
+      "status": "exact text"
+    },
+    {
+      "block": 190,
+      "status": "exact text"
+    },
+    {
+      "block": 191,
+      "status": "exact text"
+    },
+    {
+      "block": 193,
+      "status": "exact text"
+    },
+    {
+      "block": 195,
+      "status": "exact text"
+    },
+    {
+      "block": 196,
+      "status": "exact text"
+    },
+    {
+      "block": 198,
+      "status": "exact text"
+    },
+    {
+      "block": 199,
+      "status": "exact text"
+    },
+    {
+      "block": 202,
+      "status": "exact text"
+    },
+    {
+      "block": 204,
+      "status": "exact text"
+    },
+    {
+      "block": 206,
+      "status": "exact text"
+    },
+    {
+      "block": 208,
+      "status": "exact text"
+    },
+    {
+      "block": 209,
+      "status": "exact text"
+    },
+    {
+      "block": 212,
+      "status": "exact text"
+    },
+    {
+      "block": 214,
+      "status": "exact text"
+    },
+    {
+      "block": 216,
+      "status": "exact text"
+    },
+    {
+      "block": 217,
+      "status": "exact text"
+    },
+    {
+      "block": 219,
+      "status": "exact text"
+    },
+    {
+      "block": 220,
+      "status": "exact text"
+    },
+    {
+      "block": 221,
+      "status": "exact text"
+    },
+    {
+      "block": 222,
+      "status": "exact text"
+    },
+    {
+      "block": 223,
+      "status": "exact text"
+    },
+    {
+      "block": 225,
+      "status": "exact text"
+    },
+    {
+      "block": 226,
+      "status": "exact text"
+    },
+    {
+      "block": 227,
+      "status": "exact text"
+    },
+    {
+      "block": 228,
+      "status": "exact text"
+    },
+    {
+      "block": 229,
+      "status": "exact text"
+    },
+    {
+      "block": 230,
+      "status": "exact text"
+    },
+    {
+      "block": 231,
+      "status": "exact text"
+    },
+    {
+      "block": 233,
+      "status": "exact text"
+    },
+    {
+      "block": 235,
+      "status": "exact text"
+    },
+    {
+      "block": 237,
+      "status": "exact text"
+    },
+    {
+      "block": 239,
+      "status": "exact text"
+    },
+    {
+      "block": 241,
+      "status": "exact text"
+    },
+    {
+      "block": 243,
+      "status": "exact text"
+    },
+    {
+      "block": 244,
+      "status": "exact text"
+    },
+    {
+      "block": 246,
+      "status": "exact text"
+    },
+    {
+      "block": 248,
+      "status": "exact text"
+    },
+    {
+      "block": 250,
+      "status": "exact text"
+    },
+    {
+      "block": 252,
+      "status": "exact text"
+    },
+    {
+      "block": 253,
+      "status": "exact text"
+    },
+    {
+      "block": 255,
+      "status": "exact text"
+    },
+    {
+      "block": 257,
+      "status": "exact text"
+    },
+    {
+      "block": 259,
+      "status": "exact text"
+    },
+    {
+      "block": 262,
+      "status": "exact text"
+    },
+    {
+      "block": 264,
+      "status": "exact text"
+    },
+    {
+      "block": 266,
+      "status": "exact text"
+    },
+    {
+      "block": 267,
+      "status": "exact text"
+    },
+    {
+      "block": 268,
+      "status": "exact text"
+    },
+    {
+      "block": 269,
+      "status": "exact text"
+    },
+    {
+      "block": 270,
+      "status": "exact text"
+    },
+    {
+      "block": 271,
+      "status": "exact text"
+    },
+    {
+      "block": 272,
+      "status": "exact text"
+    },
+    {
+      "block": 273,
+      "status": "exact text"
+    },
+    {
+      "block": 274,
+      "status": "exact text"
+    },
+    {
+      "block": 275,
+      "status": "exact text"
+    },
+    {
+      "block": 277,
+      "status": "exact text"
+    },
+    {
+      "block": 279,
+      "status": "exact text"
+    },
+    {
+      "block": 281,
+      "status": "exact text"
+    },
+    {
+      "block": 282,
+      "status": "exact text"
+    },
+    {
+      "block": 283,
+      "status": "exact text"
+    },
+    {
+      "block": 284,
+      "status": "exact text"
+    },
+    {
+      "block": 285,
+      "status": "exact text"
+    },
+    {
+      "block": 287,
+      "status": "exact text"
+    },
+    {
+      "block": 288,
+      "status": "exact text"
+    },
+    {
+      "block": 290,
+      "status": "exact text"
+    },
+    {
+      "block": 292,
+      "status": "exact text"
+    }
+  ]
+}
