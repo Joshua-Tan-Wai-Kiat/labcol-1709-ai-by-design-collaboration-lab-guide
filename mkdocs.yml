@@ -10,8 +10,7 @@ theme:
   name: material
   custom_dir: theme/overrides
   font: false
-  icon:
-    logo: simple/cisco
+  logo: assets/cisco-live-logo.png
   palette:
     - scheme: default
       primary: custom
@@ -27,12 +26,11 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs
-    - navigation.tabs.sticky
+    - navigation.tracking
     - navigation.sections
     - navigation.footer
     - navigation.top
     - toc.integrate
-    - toc.follow
     - search.suggest
     - search.highlight
 plugins:

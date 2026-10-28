@@ -1,5 +1,6 @@
 {
   "theme": "MkDocs Material 9.7.7",
+  "formatting_reference": "https://cisco-collaboration-labguide.github.io/LABCOL-2883-Webex-Calling-Customer-Assist/index.html",
   "source": "content.html",
   "pages": [
     {
@@ -85,5 +86,5 @@
     "module-3b-language-detection-closed-captions-and-real-time-translation": "meetings/captions/",
     "module-3c-ai-assistant-in-webex-meetings": "meetings/assistant/"
   },
-  "preservation": "Original instructional prose and all published images are retained. Exercise headings are shortened, and descriptive step headings and figure captions are added. The printable guide retains all original source blocks and headings. The task-completed boilerplate is omitted from the overview and retained in the printable guide."
+  "preservation": "Original instructional prose and all 51 instructional screenshots are retained, including sample passwords and account details. Exercise headings are shortened, and descriptive step headings and figure captions are added. The printable guide retains all original source blocks and headings. The task-completed boilerplate is omitted from the overview and retained in the printable guide."
 }
