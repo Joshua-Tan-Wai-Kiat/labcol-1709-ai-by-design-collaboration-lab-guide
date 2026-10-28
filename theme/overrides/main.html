@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block scripts %}
+<span data-lab-base="{{ '.' | url }}" hidden></span>
+<script type="application/json" id="lab-legacy-routes">{{ config.extra.legacy_routes | tojson }}</script>
+{{ super() }}
+{% endblock %}

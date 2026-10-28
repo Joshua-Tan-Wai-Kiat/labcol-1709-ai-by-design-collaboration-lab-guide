@@ -1,0 +1,76 @@
+site_name: 'LABCOL-1709: AI by Design for Collaboration'
+site_description: Cisco Live Melbourne hands-on lab for Cisco AI Assistant in Webex Messaging and Meetings.
+site_author: Hussain Ali and Omer Ilyas
+site_url: https://joshua-tan-wai-kiat.github.io/labcol-1709-ai-by-design-collaboration-lab-guide/
+docs_dir: .build-docs
+site_dir: site
+use_directory_urls: true
+copyright: Cisco Live Melbourne 2026 · LABCOL-1709
+theme:
+  name: material
+  custom_dir: theme/overrides
+  font: false
+  icon:
+    logo: simple/cisco
+  palette:
+    - scheme: default
+      primary: custom
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - toc.integrate
+    - toc.follow
+    - search.suggest
+    - search.highlight
+plugins:
+  - search
+markdown_extensions:
+  - attr_list
+  - tables
+  - admonition
+  - md_in_html
+  - sane_lists
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+extra_css:
+  - stylesheets/lab.css
+extra_javascript:
+  - javascripts/lab.js
+nav:
+  - Home: index.md
+  - Getting started:
+      - Lab overview: overview.md
+      - Access your lab: getting-started/index.md
+  - Setup:
+      - Activate AI Assistant: setup/index.md
+  - Messaging:
+      - Ask AI Assistant: messaging/ask-assistant/index.md
+      - Space summaries: messaging/space-summaries/index.md
+      - Rewrite messages: messaging/rewrite/index.md
+      - Translate messages: messaging/translation/index.md
+  - Meetings:
+      - Meeting overview: meetings/index.md
+      - Schedule with AI: meetings/schedule/index.md
+      - Captions and translation: meetings/captions/index.md
+      - Meeting AI Assistant: meetings/assistant/index.md
+  - Reference:
+      - Screenshot availability: screenshots/index.md
+      - Complete printable guide: print/index.md
+extra:
+  generator: false

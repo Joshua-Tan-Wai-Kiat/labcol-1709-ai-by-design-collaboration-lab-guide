@@ -1,0 +1,89 @@
+{
+  "theme": "MkDocs Material 9.7.7",
+  "source": "content.html",
+  "pages": [
+    {
+      "path": "overview.md",
+      "step_headings": 0,
+      "captioned_screenshots": 0
+    },
+    {
+      "path": "getting-started/index.md",
+      "step_headings": 0,
+      "captioned_screenshots": 1
+    },
+    {
+      "path": "setup/index.md",
+      "step_headings": 5,
+      "captioned_screenshots": 6
+    },
+    {
+      "path": "messaging/ask-assistant/index.md",
+      "step_headings": 3,
+      "captioned_screenshots": 3
+    },
+    {
+      "path": "messaging/space-summaries/index.md",
+      "step_headings": 1,
+      "captioned_screenshots": 3
+    },
+    {
+      "path": "messaging/rewrite/index.md",
+      "step_headings": 2,
+      "captioned_screenshots": 3
+    },
+    {
+      "path": "messaging/translation/index.md",
+      "step_headings": 3,
+      "captioned_screenshots": 5
+    },
+    {
+      "path": "meetings/index.md",
+      "step_headings": 0,
+      "captioned_screenshots": 0
+    },
+    {
+      "path": "meetings/schedule/index.md",
+      "step_headings": 5,
+      "captioned_screenshots": 2
+    },
+    {
+      "path": "meetings/captions/index.md",
+      "step_headings": 14,
+      "captioned_screenshots": 9
+    },
+    {
+      "path": "meetings/assistant/index.md",
+      "step_headings": 11,
+      "captioned_screenshots": 9
+    },
+    {
+      "path": "screenshots/index.md"
+    },
+    {
+      "path": "print/index.md",
+      "step_headings": 11,
+      "captioned_screenshots": 41
+    }
+  ],
+  "legacy_routes": {
+    "webex-suite-ai-overview": "overview/",
+    "accessing-your-lab": "getting-started/",
+    "connect-to-the-workstations-via-remote-desktop": "getting-started/",
+    "login-to-the-webex-clients": "getting-started/",
+    "login-to-collaboration-control-hub-from-within-workstation-1": "getting-started/",
+    "alternate-instructions-for-accessing-collaboration-control-hub": "getting-started/",
+    "module-1-setup-your-lab-environment": "setup/",
+    "module-1a-activating-and-configuring-the-cisco-ai-assistant-in-the-control-hub": "setup/",
+    "module-2-enhancing-messaging-with-webex-ai": "messaging/ask-assistant/",
+    "module-2a-ask-me-anything-ai-assistant-for-messaging": "messaging/ask-assistant/",
+    "module-2b-space-summaries-automated-conversation-overviews": "messaging/space-summaries/",
+    "module-2c-smart-rewrite-ai-powered-message-refinement": "messaging/rewrite/",
+    "module-2d-real-time-message-translation": "messaging/translation/",
+    "module-3-ai-powered-webex-meetings": "meetings/",
+    "module-3a-schedule-your-meetings-with-cisco-ai-assistant": "meetings/schedule/",
+    "module-3b-language-detection-closed-captions-and-real-time-translation": "meetings/captions/",
+    "module-3c-ai-assistant-in-webex-meetings": "meetings/assistant/"
+  },
+  "preservation": "Original instructional prose and all published images are retained. Exercise headings are shortened, and descriptive step headings and figure captions are added. The printable guide retains all original source blocks and headings. The task-completed boilerplate is omitted from the overview and retained in the printable guide."
+}

@@ -1,138 +1,168 @@
-"""Build a concise, multi-page lab guide without third-party dependencies."""
-from pathlib import Path, PurePosixPath
-from html import escape
-from html.parser import HTMLParser
-from datetime import datetime
-import json, re, shutil
+"""Generate source-faithful lab pages and build them with MkDocs Material."""
+from pathlib import Path
+import importlib.util,sys,re,json,shutil
 
 ROOT=Path(__file__).resolve().parent
-MANIFEST=json.loads(ROOT.joinpath('source-manifest.json').read_text(encoding='utf-8'))
-AUDIT=json.loads(ROOT.joinpath('screenshot-audit.json').read_text(encoding='utf-8'))
-RAW=ROOT.joinpath('content.html').read_text(encoding='utf-8')
+if importlib.util.find_spec('mkdocs') is None:
+    for local in [ROOT.parent/'.local-deps',ROOT.parent.parent/'.local-deps']:
+        if (local/'mkdocs').is_dir():
+            sys.path.insert(0,str(local))
+            break
+from bs4 import BeautifulSoup,Tag
+from mkdocs.config import load_config
+from mkdocs.commands.build import build as build_mkdocs
+
+SOURCE=json.loads((ROOT/'source-manifest.json').read_text(encoding='utf-8'))
+AUDIT=json.loads((ROOT/'screenshot-audit.json').read_text(encoding='utf-8'))
+MODEL=json.loads((ROOT/'page-manifest.json').read_text(encoding='utf-8'))
+PAGES=MODEL['pages']
+RAW=(ROOT/'content.html').read_text(encoding='utf-8')
 chunks=re.split(r'(?=<h[23]\s)',RAW)
 SECTIONS={re.search(r'<h[23] id="([^"]+)"',chunk)[1]:chunk for chunk in chunks[1:]}
-HEADINGS=[h['id'] for h in MANIFEST['headings']]
-PAGES=[
- {'path':'index.html','title':'Lab overview','group':'Getting started','sections':HEADINGS[0:1]},
- {'path':'getting-started/index.html','title':'Access your lab','group':'Getting started','sections':HEADINGS[1:6]},
- {'path':'setup/index.html','title':'Activate AI Assistant','group':'Setup','sections':HEADINGS[6:8]},
- {'path':'messaging/ask-assistant/index.html','title':'Ask AI Assistant','group':'Messaging','sections':HEADINGS[8:10]},
- {'path':'messaging/space-summaries/index.html','title':'Space summaries','group':'Messaging','sections':HEADINGS[10:11]},
- {'path':'messaging/rewrite/index.html','title':'Rewrite messages','group':'Messaging','sections':HEADINGS[11:12]},
- {'path':'messaging/translation/index.html','title':'Translate messages','group':'Messaging','sections':HEADINGS[12:13]},
- {'path':'meetings/index.html','title':'Meeting overview','group':'Meetings','sections':HEADINGS[13:14]},
- {'path':'meetings/schedule/index.html','title':'Schedule with AI','group':'Meetings','sections':HEADINGS[14:15]},
- {'path':'meetings/captions/index.html','title':'Captions and translation','group':'Meetings','sections':HEADINGS[15:16]},
- {'path':'meetings/assistant/index.html','title':'Meeting AI Assistant','group':'Meetings','sections':HEADINGS[16:17]},
- {'path':'screenshots/index.html','title':'Screenshot availability','group':'Reference','sections':[]},
- {'path':'print/index.html','title':'Complete printable guide','group':'Reference','sections':HEADINGS},
-]
-ROUTES={key:page['path'] for page in PAGES if page['group']!='Reference' for key in page['sections']}
-assert set(ROUTES)==set(HEADINGS)
-ICONS={
- 'search':'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m16 16 5 5"/></svg>',
- 'theme':'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></svg>',
- 'menu':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M3 12h18M3 19h18"/></svg>',
- 'close':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M5 19 19 5"/></svg>',
-}
+DOCS=ROOT/'.build-docs'
+STAGE=ROOT/'site'
+for target in [DOCS,STAGE]:
+    assert target.resolve().parent==ROOT.resolve() and target.name in ['.build-docs','site'],target
+DOCS.mkdir(exist_ok=True)
+FIGURES={7:'Workstation 1 desktop and lab credential files',12:'Control Hub idle timeout',13:'Open the AI Assistant customization settings',14:'Calling AI feature settings',15:'Messaging AI features',16:'Meeting AI features',17:'General AI settings and search sources',21:'Open Cisco AI Assistant from a space',22:'Ask a question about the conversation',23:'Review the AI answer and source citations',24:'Cisco AI Assistant in the messaging space',25:'Choose a summary time range',26:'Review the generated space summary',28:'Draft a message and select Rewrite',30:'Preview a rewritten message',31:'Send the updated message',33:'Choose and save a translation language',34:'Translate an individual message',35:'Translated messages in the space',36:'Start live translation',37:'Live translations in the conversation',38:'Open the Meetings tab and AI Assistant',40:'Review and confirm the AI-scheduled meeting',42:'Enable real-time translation and transcription',44:'Join from the meeting reminder',45:'Choose a caption language',46:'Spoken language and caption controls',47:'Language detection on the speaking workstation',48:'Translated captions on the receiving workstation',49:'Select Bosnian captions',50:'French captions on one workstation',51:'Bosnian captions on the other workstation',52:'Start Cisco AI Assistant for the meeting',53:'Start the meeting recording',54:'Catch me up',55:'Was my name mentioned?',56:'What are the action items?',57:'Ask about meeting highlights',58:'Ask about the customer response',60:'Post-meeting summary',61:'Post-meeting transcript'}
+STEPS={
+ 'setup/index.html':['Open Control Hub','Sign in as Charles','Set the idle timeout','Open the AI settings','Enable the lab features'],
+ 'messaging/ask-assistant/index.html':['Open Webex','Open AI Assistant','Ask about the space'],
+ 'messaging/space-summaries/index.html':['Generate a space summary'],
+ 'messaging/rewrite/index.html':['Draft a message','Apply and send the rewrite'],
+ 'messaging/translation/index.html':['Open Webex settings','Choose your translation language','Translate messages in the space'],
+ 'meetings/schedule/index.html':['Open Webex','Open AI Assistant','Describe the meeting','Review the proposed meeting','Confirm the meeting'],
+ 'meetings/captions/index.html':['Open your meeting site','Open site options','Enable translation','Start the meeting and captions','Join as Anita','Enable captions for Anita','Set the caption language','Check the host language controls','Test another spoken language','Change Anita’s caption language','Set Charles’s language options','Compare the translated captions','Explore other languages','Keep the meeting running'],
+ 'meetings/assistant/index.html':['Keep the meeting running','Start AI Assistant','Confirm that AI Assistant is active','Record the meeting','Keep recording active','Discuss sample action items','Open Anita’s AI Assistant panel','Ask follow-up questions','End the meeting','View the post-meeting summary','Open the summary and transcript']}
+SHORT={
+ 'webex-suite-ai-overview':'Lab overview',
+ 'accessing-your-lab':'Access your lab',
+ 'connect-to-the-workstations-via-remote-desktop':'Connect to the workstations',
+ 'login-to-the-webex-clients':'Sign in to Webex',
+ 'login-to-collaboration-control-hub-from-within-workstation-1':'Sign in to Control Hub',
+ 'alternate-instructions-for-accessing-collaboration-control-hub':'Alternative Control Hub access'}
+ROUTES=dict(MODEL['legacy_routes'])
+for key,value in list(ROUTES.items()):
+    ROUTES[key]='overview/' if value=='index.html' else value.replace('index.html','')
 
-class PlainText(HTMLParser):
- def __init__(self):super().__init__(convert_charrefs=True);self.parts=[]
- def handle_data(self,data):self.parts.append(data)
-def plain(markup):
- parser=PlainText();parser.feed(markup)
- return re.sub(r'\s+',' ',' '.join(parser.parts)).strip()
-def prefix(path):
- depth=len(PurePosixPath(path).parent.parts)
- return '../'*depth if depth else './'
-def relocate(markup,base):
- return re.sub(r'((?:src|href)=")assets/',lambda m:m[1]+base+'assets/',markup)
-def heading_as(chunk,tag,cls=''):
- match=re.match(r'<h([23])([^>]*)>(.*?)</h\1>',chunk,re.S)
- assert match
- attrs=match[2]+(f' class="{cls}"' if cls else '')
- return f'<{tag}{attrs}>{match[3]}</{tag}>'+chunk[match.end():]
-def content_for(page):
- selected=[SECTIONS[key] for key in page['sections']]
- if page['path']=='print/index.html':
-  return '<div class="print-cover"><h1>AI by Design for Collaboration</h1><p>LABCOL-1709</p><p>Hussain Ali, Technical Marketing Engineer<br>Omer Ilyas, Technical Marketing Engineer</p></div>'+''.join(selected)
- if page['path']=='index.html':
-  return '<h1>Lab overview</h1><p class="authors"><span>LABCOL-1709 · AI by Design for Collaboration</span><span>Hussain Ali and Omer Ilyas · Technical Marketing Engineers</span></p>'+''.join(selected)
- if page['path'] in ['setup/index.html','messaging/ask-assistant/index.html']:
-  selected[0]=heading_as(selected[0],'p','module-label')
-  selected[1]=heading_as(selected[1],'h1')
- else:
-  selected[0]=heading_as(selected[0],'h1')
- if page['path']=='meetings/index.html':
-  # Keep the microphone note visible; retain longer background prose on demand.
-  chunk=selected[0]
-  position=chunk.find('<div',chunk.find('data-source-block="186"')+1)
-  # Blocks 187 onward are explanation, not the microphone prerequisite.
-  boundary=chunk.find('<div class="" data-source-block="187"')
-  if boundary!=-1:
-   selected[0]=chunk[:boundary]+'<details class="background-reading"><summary>Background: how AI supports Webex meetings</summary>'+chunk[boundary:]+'</details>'
- return ''.join(selected)
+def text(node):return re.sub(r'\s+',' ',node.get_text()).strip()
+def module(text_value):
+    match=re.match(r'(Module \d+[a-z]?)\s*:',text_value)
+    return match[1] if match else ''
+def md_heading(node,level,title):
+    identifier=node.get('id','')
+    attrs=(f'#{identifier} ' if identifier else '')+f'data-source-block="{node["data-source-block"]}"'
+    return '\n'+'#'*level+' '+title+' { '+attrs+' }\n\n'
 
-def audit_content():
- checked=datetime.fromisoformat(AUDIT['checked_at']).strftime('%d %B %Y at %H:%M UTC')
- rows=[]
- for image in AUDIT['images']:
-  status=image['status'];kind='published' if status=='Published' else 'private' if status=='Withheld for privacy' else 'unused'
-  number=re.search(r'\d+',image['file'])[0]
-  reference=('Screenshot '+number) if image['role']=='Instructional screenshot' else 'Image '+number
-  if status=='Published':
-   detail='HTTP 200 · matches the Word image exactly'
-   target='<a href="../'+image['path']+'" target="_blank" rel="noopener">Open image</a>'
-  else:
-   detail=image['reason'];target='—'
-  rows.append(f'<tr data-image-status="{kind}"><td>{reference}<small>{escape(image["file"])}</small></td><td>{escape(image["role"])}</td><td class="'+('status-ok' if kind=='published' else 'status-private')+f'">{escape(status)}</td><td>{escape(detail)}</td><td>{target}</td></tr>')
- return '<h1>Screenshot availability</h1><p class="audit-summary"><strong>All 41 published instructional screenshots are available.</strong> The seven inline control icons and two branding images also load correctly. Each of the 50 published files was downloaded and compared with the corresponding Word image; no missing, broken, or altered files were found.</p><p>Ten screenshots containing private access, account contact, or tenant details are intentionally withheld. They have labelled placeholders in the guide. One non-instructional menu icon is not used in the web edition. All 61 images from the Word file are accounted for below.</p><p class="audit-count">Verified '+checked+'. The checked source is the supplied Lab Guide (2).docx.</p><div class="audit-tools" role="group" aria-label="Filter image inventory"><button data-audit-filter="all" aria-pressed="true">All 61 images</button><button data-audit-filter="published" aria-pressed="false">Published 50</button><button data-audit-filter="private" aria-pressed="false">Withheld 10</button><button data-audit-filter="unused" aria-pressed="false">Not used 1</button></div><p id="audit-count" class="audit-count" aria-live="polite">61 source images shown</p><div class="table-wrap"><table><thead><tr><th>Source reference</th><th>Type</th><th>Status</th><th>Verification or reason</th><th>Preview</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>'
+def prepare_page(page):
+    soup=BeautifulSoup(''.join(SECTIONS[key] for key in page['sections']),'html.parser')
+    output=[];figure_count=0;step_count=0;heading_count=0;step_page=page['path'];step_section='guide';background=False
+    full=page['path']=='print/index.html'
+    if full:
+        output.append('# Complete printable guide\n\nAI by Design for Collaboration · LABCOL-1709\n\nHussain Ali and Omer Ilyas · Technical Marketing Engineers\n\n')
+    for node in list(soup.contents):
+        if not isinstance(node,Tag):continue
+        source_block=node.get('data-source-block')
+        if node.name in ['h2','h3']:
+            original=text(node)
+            if full:
+                step_count=0;step_page=MODEL['legacy_routes'].get(node.get('id'),page['path']);step_section=node.get('id','guide')
+                output.append(md_heading(node,2 if node.name=='h2' else 3,original));continue
+            parent=page['path'] in ['setup/index.html','messaging/ask-assistant/index.html'] and heading_count==0
+            if parent:
+                node.name='p';node['class']=['lab-module'];node.string=module(original)
+                output.append(str(node)+'\n\n');heading_count+=1;continue
+            primary=heading_count==(1 if page['path'] in ['setup/index.html','messaging/ask-assistant/index.html'] else 0)
+            title=page['title'] if primary else SHORT.get(node.get('id'),original)
+            mod=module(original)
+            if primary and mod:output.append('<p class="lab-module" data-format-generated="true">'+mod+'</p>\n\n')
+            output.append(md_heading(node,1 if primary else 2,title))
+            if primary and page['path']=='index.html':
+                output.append('<p class="lab-byline" data-format-generated="true">LABCOL-1709 · AI by Design for Collaboration<br>Hussain Ali and Omer Ilyas, Technical Marketing Engineers</p>\n\n')
+            heading_count+=1;continue
+        if source_block=='24' and page['path']=='index.html':continue
+        if source_block=='187' and page['path']=='meetings/index.html':
+            output.append('<details class="admonition note"><summary>Background: how AI supports Webex meetings</summary>\n\n');background=True
+        numeric=node.select_one('.step-number')
+        numbered=numeric is not None and text(numeric)!='•'
+        bullet=numeric is not None and text(numeric)=='•'
+        if numeric:numeric.decompose()
+        original_text=text(node)
+        complete=original_text.startswith(('This completes','This task is now completed'))
+        if numbered and not complete:
+            step_count+=1
+            names=STEPS.get(step_page,[])
+            title=names[step_count-1] if step_count<=len(names) else 'Continue the exercise'
+            marker=f'{step_section}-step-{step_count}' if full else f'step-{step_count}'
+            output.append('\n'+('####' if full else '##')+f' Step {step_count}: {title} {{ #{marker} .lab-step-title }}\n\n')
+        if not numbered:
+            for strong in list(node.select('strong')):strong.unwrap()
+        for mark in list(node.select('mark')):mark.unwrap()
+        for link in list(node.select('a.figure-link')):
+            image=link.find('img')
+            if image is None:continue
+            figure_count+=1;number=int(re.search(r'\d+',Path(image['src']).name)[0])
+            caption=FIGURES.get(number,'Lab guide reference')
+            width=int(image.get('width',760));height=int(image.get('height',460));display_width=round(min(760,width,460*width/height))
+            image['style']=f'width:min(100%,{display_width}px);aspect-ratio:{width}/{height}'
+            image['alt']=caption
+            link['data-lab-zoom']='';link['aria-label']='Enlarge '+caption;link['class']=['lab-image-link']
+            fig=soup.new_tag('figure',attrs={'class':'lab-figure'})
+            link.wrap(fig)
+            label=soup.new_tag('figcaption',attrs={'data-format-generated':'true'})
+            label.string=f'Figure {figure_count}. {caption}. Select to enlarge.'
+            fig.append(label)
+        for omitted in list(node.select('.omitted-figure')):
+            details=soup.new_tag('details',attrs={'class':'admonition note private-example'})
+            summary=soup.new_tag('summary');summary.string='Private example screenshot omitted'
+            omitted.wrap(details);details.insert(0,summary)
+        if bullet:
+            node.name='ul';node['class']=['lab-bullets']
+            inner=node.select_one('.paragraph-content')
+            if inner:inner.name='li';inner.attrs={}
+        else:node['class']=['source-paragraph']+(['lab-complete'] if complete else [])
+        if not complete and original_text.startswith(('Note:','NOTE:','Important!','VERY IMPORTANT NOTE:')):
+            aside=soup.new_tag('div',attrs={'class':'admonition note'})
+            title=soup.new_tag('p',attrs={'class':'admonition-title','data-format-generated':'true'})
+            title.string='Microphone prerequisite' if source_block=='186' else 'Note'
+            aside.append(title);aside.append(node.extract());node=aside
+        output.append(str(node)+'\n\n')
+    if background:output.append('</details>\n\n')
+    markup=''.join(output)
+    # Page-relative paths resolve against the generated directory URLs.
+    old=page['path'];depth=len(Path(old).parent.parts)
+    base='../'*depth if depth else '../'  # overview.md renders in overview/.
+    markup=re.sub(r'((?:src|href)=")assets/',lambda m:m[1]+base+'assets/',markup)
+    return markup,{'step_headings':step_count,'captioned_screenshots':figure_count}
 
-def sidebar(page,base):
- groups=[]
- for group in ['Getting started','Setup','Messaging','Meetings','Reference']:
-  if group not in [page['group'],'Reference']:continue
-  links=[]
-  for item in PAGES:
-   if item['group']!=group:continue
-   active=item['path']==page['path']
-   current=' aria-current="page"' if active else ''
-   toc=''
-   if active and len(item['sections'])>1 and item['group']!='Reference':
-    toc='<ul class="page-toc">'+''.join(f'<li><a href="#{key}">{escape(next(h["title"] for h in MANIFEST["headings"] if h["id"]==key))}</a></li>' for key in item['sections'][1:])+'</ul>'
-   links.append(f'<li><a href="{base+item["path"]}"{current}>{escape(item["title"])}</a>{toc}</li>')
-  groups.append(f'<section class="nav-group"><h2>{group}</h2><ul>'+''.join(links)+'</ul></section>')
- return ''.join(groups)
-
-def render(page,index,body):
- base=prefix(page['path'])
- tabs=[]
- for label,path in [('Getting started','index.html'),('Setup','setup/index.html'),('Messaging','messaging/ask-assistant/index.html'),('Meetings','meetings/index.html'),('Reference','screenshots/index.html')]:
-  active=' aria-current="true"' if page['group']==label else ''
-  tabs.append(f'<a href="{base+path}"{active}>{label}</a>')
- prev=PAGES[index-1] if index else None
- after=PAGES[index+1] if index+1<len(PAGES) else None
- previous=f'<a href="{base+prev["path"]}"><small>← Previous</small><strong>{escape(prev["title"])}</strong></a>' if prev else '<span></span>'
- following=f'<a class="next" href="{base+after["path"]}"><small>Next →</small><strong>{escape(after["title"])}</strong></a>' if after else '<span></span>'
- root_data=escape(base,quote=True)
- return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(page['title'])} | LABCOL-1709</title><meta name="description" content="Cisco Live Melbourne AI by Design for Collaboration lab guide"><script>try{{document.documentElement.dataset.theme=localStorage.getItem('labcol1709-theme')||'light';}}catch(_){{}}</script><link rel="stylesheet" href="{base}assets/site.css"></head><body data-root="{root_data}"><a class="skip" href="#main-content">Skip to content</a><header class="site-header"><div class="header-inner"><button class="icon-button menu-button" id="menu-toggle" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false">{ICONS['menu']}</button><a class="brand" href="{base}index.html">Cisco <b>Live!</b></a><span class="site-title">LABCOL-1709 · AI by Design for Collaboration</span><button id="theme-toggle" class="icon-button" aria-label="Switch to dark mode" aria-pressed="false">{ICONS['theme']}</button><button class="search-trigger" id="search-open" aria-label="Search guide">{ICONS['search']}<span>Search</span><kbd>/</kbd></button></div><nav class="tabs" aria-label="Lab sections">{''.join(tabs)}</nav></header><button class="nav-shade" id="nav-shade" aria-label="Close navigation"></button><div class="docs-layout"><nav class="sidebar" id="site-navigation" aria-label="Lab navigation"><div class="drawer-close">LABCOL-1709<button id="menu-close" class="icon-button" aria-label="Close navigation">{ICONS['close']}</button></div>{sidebar(page,base)}</nav><article id="main-content"><div class="breadcrumbs"><a href="{base}index.html">LABCOL-1709</a> / {escape(page['group'])}</div>{body}<div class="page-footer"><a href="{base}screenshots/index.html">Screenshot availability</a><a href="{base}print/index.html">Complete printable guide</a><a href="https://github.com/Joshua-Tan-Wai-Kiat/labcol-1709-ai-by-design-collaboration-lab-guide">GitHub</a></div></article></div><footer><nav class="next-prev" aria-label="Previous and next exercise"><div class="next-prev-inner">{previous}{following}</div></nav><div class="copyright">Cisco Live Melbourne 2026 · LABCOL-1709 · Based on the supplied lab guide</div></footer><dialog id="search-dialog" class="search-dialog" aria-label="Search the lab guide"><div class="search-box">{ICONS['search']}<input id="guide-search" type="search" aria-label="Search all exercises" placeholder="Search the guide" autocomplete="off"><button id="search-close" class="icon-button" aria-label="Close search">{ICONS['close']}</button></div><div id="search-results" class="search-results" aria-live="polite"><p class="search-message">Search the guide for a feature, setting, or exercise.</p></div></dialog><script type="application/json" id="legacy-routes">{json.dumps(ROUTES)}</script><script src="{base}assets/site.js" defer></script></body></html>'''
+def audit_page():
+    lines=['# Screenshot availability','','All **41 instructional screenshots** are published. The seven control icons and two branding images are also available. Each of the 50 published assets was downloaded and matched against its Word original.','','Ten images containing private details are intentionally withheld, and one non-instructional menu icon is unused. The table accounts for all 61 Word images.','','Last image check: '+AUDIT['checked_at']+'.','','| Source image | Type | Status | Preview or reason |','| --- | --- | --- | --- |']
+    for item in AUDIT['images']:
+        value=('[Open original](../'+item['path']+')') if item['status']=='Published' else item['reason']
+        lines.append('| '+item['file']+' | '+item['role']+' | '+item['status']+' | '+value+' |')
+    return '\n'.join(lines)+'\n'
 
 def build():
- search=[];rendered=[]
- for index,page in enumerate(PAGES):
-  body=audit_content() if page['path']=='screenshots/index.html' else content_for(page)
-  # Source asset links become relative to each exercise directory.
-  if page['path']!='screenshots/index.html':body=relocate(body,prefix(page['path']))
-  result=render(page,index,body)
-  path=ROOT/page['path'];path.parent.mkdir(parents=True,exist_ok=True);path.write_text('\n'.join(line.rstrip() for line in result.splitlines())+'\n',encoding='utf-8',newline='\n')
-  rendered.append(page['path'])
-  if page['path']!='print/index.html':search.append({'path':page['path'],'title':page['title'],'text':plain(body)})
- ROOT.joinpath('search-index.json').write_text(json.dumps(search,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
- ROOT.joinpath('page-manifest.json').write_text(json.dumps({'pages':PAGES,'legacy_routes':ROUTES},indent=2)+'\n',encoding='utf-8',newline='\n')
- stage=ROOT/'site';stage.mkdir(exist_ok=True)
- for name in rendered+['GUIDE.md','source-manifest.json','screenshot-audit.json','search-index.json','page-manifest.json']:
-  target=stage/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/name,target)
- shutil.copytree(ROOT/'assets',stage/'assets',dirs_exist_ok=True)
- print(f'Built {len(PAGES)} documentation pages; all {MANIFEST["source_blocks"]} source blocks and {AUDIT["published_assets"]} published images retained.')
+    generated=[];formatting=[]
+    home='---\ntemplate: home.html\nhide:\n  - navigation\n  - toc\ntitle: Home\n---\n'
+    (DOCS/'index.md').write_text(home,encoding='utf-8',newline='\n')
+    for page in PAGES:
+        if page['path']=='screenshots/index.html':body=audit_page();stats={}
+        else:body,stats=prepare_page(page)
+        target='overview.md' if page['path']=='index.html' else page['path'].replace('index.html','index.md')
+        path=DOCS/target;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(body,encoding='utf-8',newline='\n')
+        generated.append(target);formatting.append({'path':target,**stats})
+    (DOCS/'stylesheets').mkdir(exist_ok=True);(DOCS/'javascripts').mkdir(exist_ok=True)
+    shutil.copy2(ROOT/'theme/lab.css',DOCS/'stylesheets/lab.css')
+    shutil.copy2(ROOT/'theme/lab.js',DOCS/'javascripts/lab.js')
+    shutil.copytree(ROOT/'assets/source-guide',DOCS/'assets/source-guide',dirs_exist_ok=True)
+    for name in ['source-manifest.json','screenshot-audit.json']:shutil.copy2(ROOT/name,DOCS/name)
+    config=load_config(config_file=str(ROOT/'mkdocs.yml'))
+    config.extra['legacy_routes']=ROUTES
+    # MkDocs cleans only this validated, generated output directory.
+    assert Path(config.site_dir).resolve()==STAGE.resolve() and STAGE.resolve().parent==ROOT.resolve()
+    build_mkdocs(config)
+    (ROOT/'formatting-manifest.json').write_text(json.dumps({'theme':'MkDocs Material 9.7.7','source':'content.html','pages':formatting,'legacy_routes':ROUTES,'preservation':'Original instructional prose and all published images are retained. Exercise headings are shortened, and descriptive step headings and figure captions are added. The printable guide retains all original source blocks and headings. The task-completed boilerplate is omitted from the overview and retained in the printable guide.'},indent=2)+'\n',encoding='utf-8',newline='\n')
+    print('Built Material site with',len(generated)+1,'pages and',len(SOURCE['included_images']),'unchanged source images.')
 
 if __name__=='__main__':build()
