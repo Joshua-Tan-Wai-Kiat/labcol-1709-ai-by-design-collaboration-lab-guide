@@ -1,8 +1,12 @@
 (() => {
   const base = new URL(document.querySelector('[data-lab-base]').dataset.labBase, location.href);
   const routes = JSON.parse(document.getElementById('lab-legacy-routes').textContent);
-  const hash = decodeURIComponent(location.hash.slice(1));
-  if (hash && !document.getElementById(hash) && routes[hash]) location.replace(new URL(routes[hash],base).href + '#' + hash);
+  const followLegacy = () => {
+    const hash = decodeURIComponent(location.hash.slice(1));
+    if (hash && !document.getElementById(hash) && routes[hash]) location.replace(new URL(routes[hash],base).href + '#' + hash);
+  };
+  followLegacy();
+  window.addEventListener('hashchange',followLegacy);
   const viewer = document.createElement('dialog');
   viewer.className = 'lab-zoom'; viewer.setAttribute('aria-label','Enlarged lab screenshot');
   const bar = document.createElement('div'); bar.className='lab-zoom__bar';
