@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-27T05:26:24.118883+00:00",
+  "checked_at": "2026-10-28T05:05:55.508414+00:00",
   "base_url": "https://joshua-tan-wai-kiat.github.io/labcol-1709-ai-by-design-collaboration-lab-guide/",
   "word_media_total": 61,
-  "published_assets": 50,
-  "published_screenshots": 41,
+  "published_assets": 60,
+  "published_screenshots": 51,
   "published_control_icons": 7,
   "published_branding": 2,
-  "withheld_for_privacy": 10,
+  "withheld_for_privacy": 0,
   "non_instructional_not_used": 1,
   "failed_assets": [],
   "images": [
@@ -39,20 +39,29 @@
     {
       "file": "image4.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Example VPN credentials and session identifier"
+      "status": "Published",
+      "path": "assets/source-guide/image4.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 55125
     },
     {
       "file": "image5.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Example VPN account"
+      "status": "Published",
+      "path": "assets/source-guide/image5.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 83473
     },
     {
       "file": "image6.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Workstation credentials and session identifier"
+      "status": "Published",
+      "path": "assets/source-guide/image6.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 91742
     },
     {
       "file": "image7.png",
@@ -67,26 +76,38 @@
     {
       "file": "image8.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Password and administrator account"
+      "status": "Published",
+      "path": "assets/source-guide/image8.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 16925
     },
     {
       "file": "image9.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Passwords and session details"
+      "status": "Published",
+      "path": "assets/source-guide/image9.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 18145
     },
     {
       "file": "image10.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Example session DNS and identifier"
+      "status": "Published",
+      "path": "assets/source-guide/image10.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 67703
     },
     {
       "file": "image11.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Passwords and administrator account"
+      "status": "Published",
+      "path": "assets/source-guide/image11.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 56608
     },
     {
       "file": "image12.png",
@@ -291,8 +312,11 @@
     {
       "file": "image32.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Private account email and phone number"
+      "status": "Published",
+      "path": "assets/source-guide/image32.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 129837
     },
     {
       "file": "image33.png",
@@ -357,8 +381,11 @@
     {
       "file": "image39.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Password and administrator account"
+      "status": "Published",
+      "path": "assets/source-guide/image39.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 24763
     },
     {
       "file": "image40.png",
@@ -373,8 +400,11 @@
     {
       "file": "image41.png",
       "role": "Instructional screenshot",
-      "status": "Withheld for privacy",
-      "reason": "Tenant subscription identifier and session site"
+      "status": "Published",
+      "path": "assets/source-guide/image41.png",
+      "available": true,
+      "matches_word_image": true,
+      "bytes": 270667
     },
     {
       "file": "image42.png",
@@ -576,5 +606,6 @@
       "role": "Instructional screenshot",
       "status": "Published"
     }
-  ]
+  ],
+  "verification_scope": "Local source-image fidelity; live availability is checked after deployment."
 }

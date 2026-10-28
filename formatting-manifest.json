@@ -10,12 +10,12 @@
     {
       "path": "getting-started/index.md",
       "step_headings": 0,
-      "captioned_screenshots": 1
+      "captioned_screenshots": 8
     },
     {
       "path": "setup/index.md",
       "step_headings": 5,
-      "captioned_screenshots": 6
+      "captioned_screenshots": 7
     },
     {
       "path": "messaging/ask-assistant/index.md",
@@ -35,7 +35,7 @@
     {
       "path": "messaging/translation/index.md",
       "step_headings": 3,
-      "captioned_screenshots": 5
+      "captioned_screenshots": 6
     },
     {
       "path": "meetings/index.md",
@@ -45,12 +45,12 @@
     {
       "path": "meetings/schedule/index.md",
       "step_headings": 5,
-      "captioned_screenshots": 2
+      "captioned_screenshots": 3
     },
     {
       "path": "meetings/captions/index.md",
       "step_headings": 14,
-      "captioned_screenshots": 9
+      "captioned_screenshots": 10
     },
     {
       "path": "meetings/assistant/index.md",
@@ -63,7 +63,7 @@
     {
       "path": "print/index.md",
       "step_headings": 11,
-      "captioned_screenshots": 41
+      "captioned_screenshots": 52
     }
   ],
   "legacy_routes": {

@@ -24,9 +24,13 @@ AnyConnect (Cisco Secure Client) Username: use the username provided in your ass
 
 AnyConnect (Cisco Secure Client) Password: use the password provided in your assigned dCloud session.
 
-<span class="omitted-figure">Screenshot 4: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image4.png" target="_blank" rel="noopener" aria-label="Open screenshot 4 at full size"><img class="source-figure" src="assets/source-guide/image4.png" width="1340" height="477" style="width:min(100%,1340px);aspect-ratio:1340/477" alt="A screenshot of a computer
 
-<span class="omitted-figure">Screenshot 5: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+Description automatically generated" loading="lazy" decoding="async"></a>
+
+<a class="figure-link" href="assets/source-guide/image5.png" target="_blank" rel="noopener" aria-label="Open screenshot 5 at full size"><img class="source-figure" src="assets/source-guide/image5.png" width="887" height="281" style="width:min(100%,887px);aspect-ratio:887/281" alt="A screenshot of a computer
+
+Description automatically generated" loading="lazy" decoding="async"></a>
 
 <strong>Important!</strong><strong> </strong><strong>Each</strong><strong> </strong><strong>dCloud</strong><strong> </strong><strong>session</strong><strong> </strong><strong>has</strong><strong> </strong><strong>its</strong><strong> </strong><strong>own</strong><strong> </strong><strong>unique</strong><strong> </strong><strong>details.</strong><strong> Do not use the credentials shown above in the screenshots.</strong>Continue to next step after connecting to the pod via the Cisco Secure Client. 
 
@@ -38,23 +42,25 @@ The user for Workstation 1 in this lab will be Charles Holland (<strong>cholland
 
 To connect to Workstation 2, follow similar instructions. The user for Workstation 2 will be Anita Perez (<strong>aperez</strong>). 
 
-<span class="omitted-figure">Screenshot 6: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image6.png" target="_blank" rel="noopener" aria-label="Open screenshot 6 at full size"><img class="source-figure" src="assets/source-guide/image6.png" width="1321" height="523" style="width:min(100%,1321px);aspect-ratio:1321/523" alt="A screenshot of a computer
+
+Description automatically generated" loading="lazy" decoding="async"></a>
 
 <a class="figure-link" href="assets/source-guide/image7.png" target="_blank" rel="noopener" aria-label="Open screenshot 7 at full size"><img class="source-figure" src="assets/source-guide/image7.png" width="3661" height="1659" style="width:min(100%,3661px);aspect-ratio:3661/1659" alt="Lab guide screenshot 7" loading="lazy" decoding="async"></a>
 
 Within Workstation 1’s Desktop, there will be a file named WEBEX_PASSWORD.txt or Session_Info.txt as shown above. Launch the file to get the username and password for the Webex App and the Collaboration Control Hub for this lab. 
 
-<span class="omitted-figure">Screenshot 8: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image8.png" target="_blank" rel="noopener" aria-label="Open screenshot 8 at full size"><img class="source-figure" src="assets/source-guide/image8.png" width="880" height="336" style="width:min(100%,880px);aspect-ratio:880/336" alt="Lab guide screenshot 8" loading="lazy" decoding="async"></a>
 
 OR 
 
-<span class="omitted-figure">Screenshot 9: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image9.png" target="_blank" rel="noopener" aria-label="Open screenshot 9 at full size"><img class="source-figure" src="assets/source-guide/image9.png" width="602" height="276" style="width:min(100%,602px);aspect-ratio:602/276" alt="Lab guide screenshot 9" loading="lazy" decoding="async"></a>
 
 ## Login to the Webex Clients
 
 Login to the Webex App from within workstation 1 for the user Charles Holland (cholland) and from within workstation 2 for the user Anita Perez (aperez). Credentials should be in the respective files placed on the Desktops of the respective workstations. Refer to an example file with the credential details:
 
-<span class="omitted-figure">Screenshot 9: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image9.png" target="_blank" rel="noopener" aria-label="Open screenshot 9 at full size"><img class="source-figure" src="assets/source-guide/image9.png" width="602" height="276" style="width:min(100%,602px);aspect-ratio:602/276" alt="Lab guide screenshot 9" loading="lazy" decoding="async"></a>
 
 ## Login to Collaboration Control Hub from within Workstation 1
 
@@ -74,7 +80,9 @@ Control Hub Username: cholland@<FQDN>, using the FQDN shown in your assigned ses
 
 Control Hub Password: obtain the password privately from your assigned session or instructor.
 
-<strong><span class="omitted-figure">Screenshot 10: example private access or account details omitted from the public edition. Use your assigned session details.</span></strong>
+<strong><a class="figure-link" href="assets/source-guide/image10.png" target="_blank" rel="noopener" aria-label="Open screenshot 10 at full size"><img class="source-figure" src="assets/source-guide/image10.png" width="1292" height="617" style="width:min(100%,1292px);aspect-ratio:1292/617" alt="A screenshot of a computer
+
+Description automatically generated" loading="lazy" decoding="async"></a></strong>
 
 1) On your PC, open Chrome browser and navigate to <a href="https://admin.webex.com/">https://admin.webex.com</a>
 
@@ -96,7 +104,7 @@ The Webex Control Hub serves as the central command center for <strong>Webex AI<
 
 <strong>VERY IMPORTANT</strong> <strong>NOTE</strong>: Every session/pod has its own credentials; the below screenshot is for <u><em><strong>reference</strong></em></u> purpose only.  Use the credentials from your own session/pod.
 
-<span class="omitted-figure">Screenshot 11: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image11.png" target="_blank" rel="noopener" aria-label="Open screenshot 11 at full size"><img class="source-figure" src="assets/source-guide/image11.png" width="918" height="462" style="width:min(100%,918px);aspect-ratio:918/462" alt="Lab guide screenshot 11" loading="lazy" decoding="async"></a>
 
 3. Once logged into Control Hub, for security reasons, <strong>Collaboration</strong><strong> Control Hub</strong> signs out every 20 minutes (Idle timeout) by default. For this lab, let’s make the idle time out longer so the Control Hub does not sign you out often during this lab. Go to <strong>MANAGEMENT &gt; Organization Settings &gt; Control Hub’s idle timeout. </strong>Drop down the option for <strong>Control Hub idle timeout</strong> and select <strong>12 hours </strong>or <strong>no timeout</strong>. Click <strong>Save</strong>.
 
@@ -198,7 +206,9 @@ To translate messages in a space from any language to your desired language, sel
 
 1. Continuing on workstation 1’s Webex App, click on Profile picture (top left corner) on the Webex app and go to <strong>Settings.</strong>
 
-<span class="omitted-figure">Screenshot 32: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image32.png" target="_blank" rel="noopener" aria-label="Open screenshot 32 at full size"><img class="source-figure" src="assets/source-guide/image32.png" width="626" height="1234" style="width:min(100%,626px);aspect-ratio:626/1234" alt="A screenshot of a phone
+
+AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
 2. It will bring up Webex Settings pop-up window.  On the pop-up window select <strong>General &gt; Translation language.  </strong>Select your <strong>preferred language for translation</strong> from the drop-down list, and click <strong>Save</strong>.
 
@@ -252,7 +262,7 @@ In this lab we will use the latest method to schedule a Webex Meeting – via th
 
 <strong>NOTE</strong><strong>: </strong> Replace the cbXXX.dc-YY.com with your session domain. 
 
-<span class="omitted-figure">Screenshot 39: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image39.png" target="_blank" rel="noopener" aria-label="Open screenshot 39 at full size"><img class="source-figure" src="assets/source-guide/image39.png" width="942" height="221" style="width:min(100%,942px);aspect-ratio:942/221" alt="Lab guide screenshot 39" loading="lazy" decoding="async"></a>
 
 4. The assistant will capture the information and summarize the request. It may suggest additional times if the requested time does not suit all attendees. Feel free to update anything by further conversation or confirm.
 
@@ -268,7 +278,7 @@ In <strong>Webex Meetings, </strong>powered by AI, Webex can automatically detec
 
 2. On the Meeting site Go to<strong> Common Settings</strong> &gt; <strong>Site Options.  </strong>
 
-<span class="omitted-figure">Screenshot 41: example private access or account details omitted from the public edition. Use your assigned session details.</span>
+<a class="figure-link" href="assets/source-guide/image41.png" target="_blank" rel="noopener" aria-label="Open screenshot 41 at full size"><img class="source-figure" src="assets/source-guide/image41.png" width="1950" height="1198" style="width:min(100%,1950px);aspect-ratio:1950/1198" alt="Lab guide screenshot 41" loading="lazy" decoding="async"></a>
 
 3.  On the site options page, scroll down to Closed captioning configuration and toggle ON the option <strong>Allow real-time translation and transcription in multiple languages</strong>.  Click <strong>Save</strong>.
 

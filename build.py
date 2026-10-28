@@ -41,6 +41,7 @@ SHORT={
  'login-to-the-webex-clients':'Sign in to Webex',
  'login-to-collaboration-control-hub-from-within-workstation-1':'Sign in to Control Hub',
  'alternate-instructions-for-accessing-collaboration-control-hub':'Alternative Control Hub access'}
+FIGURES.update({4:'Locate the sample dCloud VPN connection details',5:'Connect with Cisco Secure Client',6:'Locate workstation credentials in the lab session',8:'Control Hub sign-in example',9:'Locate the lab organization and sign-in details',10:'Locate the session DNS name and session ID',11:'Sign in to Control Hub as Charles',32:'Open the Webex profile and translation settings',39:'Sign in to schedule a meeting',41:'Locate the lab site and subscription details'})
 ROUTES=dict(MODEL['legacy_routes'])
 for key,value in list(ROUTES.items()):
     ROUTES[key]='overview/' if value=='index.html' else value.replace('index.html','')
@@ -136,7 +137,7 @@ def prepare_page(page):
     return markup,{'step_headings':step_count,'captioned_screenshots':figure_count}
 
 def audit_page():
-    lines=['# Screenshot availability','','All **41 instructional screenshots** are published. The seven control icons and two branding images are also available. Each of the 50 published assets was downloaded and matched against its Word original.','','Ten images containing private details are intentionally withheld, and one non-instructional menu icon is unused. The table accounts for all 61 Word images.','','Last image check: '+AUDIT['checked_at']+'.','','| Source image | Type | Status | Preview or reason |','| --- | --- | --- | --- |']
+    lines=['# Screenshot availability','','All **51 instructional screenshots** are included, including the original sample credentials and session examples. The seven control icons and two branding images are also available. All 60 published assets match their Word originals.','','No instructional screenshot is omitted. One non-instructional menu icon is unused. The table accounts for all 61 Word images.','','Last image check: '+AUDIT['checked_at']+'.','','| Source image | Type | Status | Preview or reason |','| --- | --- | --- | --- |']
     for item in AUDIT['images']:
         value=('[Open original](../'+item['path']+')') if item['status']=='Published' else item['reason']
         lines.append('| '+item['file']+' | '+item['role']+' | '+item['status']+' | '+value+' |')
