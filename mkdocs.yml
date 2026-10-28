@@ -1,7 +1,7 @@
-site_name: 'LABCOL-1709: AI by Design for Collaboration'
+site_name: 'LABCOL-1709 AI by Design for Collaboration'
 site_description: Cisco Live Melbourne hands-on lab for Cisco AI Assistant in Webex Messaging and Meetings.
 site_author: Hussain Ali and Omer Ilyas
-site_url: https://joshua-tan-wai-kiat.github.io/labcol-1709-ai-by-design-collaboration-lab-guide/
+site_url: https://cisco-collaboration-labguide.github.io/LABCOL-1709-AI-by-Design-for-Collaboration/
 docs_dir: .build-docs
 site_dir: site
 use_directory_urls: true
